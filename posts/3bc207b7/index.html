@@ -6,13 +6,13 @@
     
     
     
-    <title>西红柿~当当当~~</title>
+    <title>hexo配置、如何写博客及更换电脑后更新博客 | 西红柿~当当当~~</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     
     <meta name="theme-color" content="#77AAFF">
     
     
-    <meta name="keywords" content="前端">
+    <meta name="keywords" content="">
     
     
 
@@ -39,17 +39,22 @@
 
 
     
-    <meta name="description" content="喜欢晴天，喜欢雨天">
+    <meta name="description" content="&amp;#x672C;&amp;#x7BC7;&amp;#x53C2;&amp;#x8003;&amp;#x94FE;&amp;#x63A5;&amp;#xFF1A;hexo&amp;#x4ECE;&amp;#x96F6;&amp;#x5F00;&amp;#x59CB;&amp;#x5230;&amp;#x642D;&amp;#x5EFA;&amp;#x5B8C;&amp;#x6574; &amp;#x200B;               hexo&amp;#x5199;&amp;#x535A;&amp;#x5BA2;&amp;#x7684;&amp;#x2018;">
 <meta name="keywords" content="前端">
-<meta property="og:type" content="website">
-<meta property="og:title" content="西红柿~当当当~~">
-<meta property="og:url" content="https://Jiangyue-way.github.io/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo配置、如何写博客及更换电脑后更新博客">
+<meta property="og:url" content="https://Jiangyue-way.github.io/posts/3bc207b7/index.html">
 <meta property="og:site_name" content="西红柿~当当当~~">
-<meta property="og:description" content="喜欢晴天，喜欢雨天">
+<meta property="og:description" content="&amp;#x672C;&amp;#x7BC7;&amp;#x53C2;&amp;#x8003;&amp;#x94FE;&amp;#x63A5;&amp;#xFF1A;hexo&amp;#x4ECE;&amp;#x96F6;&amp;#x5F00;&amp;#x59CB;&amp;#x5230;&amp;#x642D;&amp;#x5EFA;&amp;#x5B8C;&amp;#x6574; &amp;#x200B;               hexo&amp;#x5199;&amp;#x535A;&amp;#x5BA2;&amp;#x7684;&amp;#x2018;">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://jiangyue-way.github.io/posts/3bc207b7/init1.png">
+<meta property="og:image" content="https://jiangyue-way.github.io/posts/3bc207b7/init2.png">
+<meta property="og:image" content="https://jiangyue-way.github.io/posts/3bc207b7/change1.png">
+<meta property="og:updated_time" content="2018-10-16T03:56:09.222Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="西红柿~当当当~~">
-<meta name="twitter:description" content="喜欢晴天，喜欢雨天">
+<meta name="twitter:title" content="hexo配置、如何写博客及更换电脑后更新博客">
+<meta name="twitter:description" content="&amp;#x672C;&amp;#x7BC7;&amp;#x53C2;&amp;#x8003;&amp;#x94FE;&amp;#x63A5;&amp;#xFF1A;hexo&amp;#x4ECE;&amp;#x96F6;&amp;#x5F00;&amp;#x59CB;&amp;#x5230;&amp;#x642D;&amp;#x5EFA;&amp;#x5B8C;&amp;#x6574; &amp;#x200B;               hexo&amp;#x5199;&amp;#x535A;&amp;#x5BA2;&amp;#x7684;&amp;#x2018;">
+<meta name="twitter:image" content="https://jiangyue-way.github.io/posts/3bc207b7/init1.png">
     
         <link rel="alternate" type="application/atom+xml" title="西红柿~当当当~~" href="/atom.xml">
     
@@ -64,7 +69,7 @@
 
 <body>
     <div id="loading" class="active"></div>
-    <aside id="menu"   >
+    <aside id="menu"  class="hide" >
   <div class="inner flex-row-vertical">
     <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
         <i class="icon icon-lg icon-close"></i>
@@ -85,7 +90,7 @@
     <div class="scroll-wrap flex-col">
       <ul class="nav">
         
-              <li class="waves-block waves-effect active">
+              <li class="waves-block waves-effect">
                   <a href="/"  >
                     <i class="icon icon-lg icon-home"></i>
                     <span>主 页</span><i class="icon icon-lg icon-caret-left"></i>
@@ -151,7 +156,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">西红柿~当当当~~</div>
+        <div class="flex-col header-title ellipsis">hexo配置、如何写博客及更换电脑后更新博客</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -168,19 +173,16 @@
         </a>
     </div>
 </header>
-<header class="content-header index-header">
+<header class="content-header post-header">
     
     
     <div class="container fade-scale">
         <div id="myheader">
             <h1 class="title">
-                 
-                    西红柿~当当当~~
                 
             </h1>
             <h5 class="subtitle">
                 
-                    在Web全栈的道路上努力前行...
                 
             </h5>
         </div>
@@ -188,34 +190,47 @@
 
 </header>
 
+
 <div class="container body-wrap">
-    <ul class="post-list">
     
-        <li class="post-list-item fade">
-            <article id="post-hexo"
-  class="article-card article-type-post" itemprop="blogPost">
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#hexo配置"><span class="post-toc-number">1.</span> <span class="post-toc-text">hexo配置</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#hexo如何写博客"><span class="post-toc-number">2.</span> <span class="post-toc-text">hexo如何写博客</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#跟换电脑后如何继续写博客"><span class="post-toc-number">3.</span> <span class="post-toc-text">跟换电脑后如何继续写博客</span></a></li></ol>
+        </nav>
+    </aside>
+   
+<article id="post-hexo"
+  class="post-article article-type-post fade" itemprop="blogPost">
 
-    
+    <div class="post-card">
+        <h1 class="post-card-title">hexo配置、如何写博客及更换电脑后更新博客</h1>
+        <div class="post-meta">
+            <i class="icon icon-lg icon-calendar-o"></i>
+            发表于
+            <time class="post-time" title="2018-10-15 14:38:08" datetime="2018-10-15T06:38:08.000Z"  itemprop="datePublished">2018-10-15</time>
+
+            <br id="mybreak"/>
+            
+<script>
+	mybreak.style="display:none";
+</script>
 
 
-  
-    <h3 class="post-title" itemprop="name">
-      <a href="/posts/3bc207b7/">hexo配置、如何写博客及更换电脑后更新博客</a>
-    </h3>
-  
+            <i>·</i>
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>次浏览
+</span>
 
 
-
-
-     <div class="post-meta">
-        <time class="post-time" title="2018-10-15 14:38:08" datetime="2018-10-15T06:38:08.000Z"  itemprop="datePublished">2018-10-15</time>
-
-    </div>
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        <p>&#x672C;&#x7BC7;&#x53C2;&#x8003;&#x94FE;&#x63A5;&#xFF1A;<a href="https://www.cnblogs.com/visugar/p/6821777.html" target="_blank" rel="noopener">hexo&#x4ECE;&#x96F6;&#x5F00;&#x59CB;&#x5230;&#x642D;&#x5EFA;&#x5B8C;&#x6574;</a></p>
+        </div>
+        <div class="post-count-custom">
+            <i class="icon icon-lg icon-comment-o"></i>
+            阅读本文可能花费您&nbsp;<span class="post-count">9</span>&nbsp;分钟
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>&#x672C;&#x7BC7;&#x53C2;&#x8003;&#x94FE;&#x63A5;&#xFF1A;<a href="https://www.cnblogs.com/visugar/p/6821777.html" target="_blank" rel="noopener">hexo&#x4ECE;&#x96F6;&#x5F00;&#x59CB;&#x5230;&#x642D;&#x5EFA;&#x5B8C;&#x6574;</a></p>
 <p>&#x200B;               <a href="https://www.jianshu.com/p/56d99a3049a5" target="_blank" rel="noopener">hexo&#x5199;&#x535A;&#x5BA2;&#x7684;&#x2018;&#x8BED;&#x6CD5;&#x2018;1</a></p>
 <p>&#x200B;               <a href="https://blog.csdn.net/wsmrzx/article/details/81478945" target="_blank" rel="noopener">hexo&#x5199;&#x535A;&#x5BA2;&#x7684;&#x2018;&#x8BED;&#x6CD5;&#x2018;2</a></p>
 <p>&#x200B;                           <a href="https://blog.csdn.net/eternity1118_/article/details/71194395?ref=myread" target="_blank" rel="noopener">&#x66F4;&#x6362;&#x7535;&#x8111;&#x540E;&#x5982;&#x4F55;&#x5199;&#x535A;&#x5BA2;</a></p>
@@ -337,58 +352,131 @@
             document.body.appendChild(img);
           });
       </script>
-    
-        <div>
-            <a href="/posts/3bc207b7/" class="post-more waves-button">
-                続きを読む…
-            </a>
         </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最終更新：<time datetime="2018-10-16T03:56:09.222Z" itemprop="dateUpdated">2018-10-16 11:56:09</time>
+</span>
+
+
+        
+        原文链接：<a href="/posts/3bc207b7/" target="_blank" rel="external">https://Jiangyue-way.github.io/posts/3bc207b7/</a>
+        
     </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-hello-world"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a href="/posts/4a17b156/">Hello World</a>
-    </h3>
-  
-
-
-
-
-     <div class="post-meta">
-        <time class="post-time" title="2018-10-15 10:36:11" datetime="2018-10-15T02:36:11.379Z"  itemprop="datePublished">2018-10-15</time>
-
-    </div>
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-    
-        <div>
-            <a href="/posts/4a17b156/" class="post-more waves-button">
-                続きを読む…
-            </a>
+    <footer>
+        <div onclick="location.href='https://Jiangyue-way.github.io'">
+            <img src="/img/avatar.jpg" alt="Lanyangyang~">
+            <a>Lanyangyang~</a>
         </div>
-    </div>
-    
-</article>
+    </footer>
+</blockquote>
 
-        </li>
+        
+    <div class="page-reward">
+        <nav class="myreward">
+            <a id="rewardBtn" href="javascript:;"><span>打&nbsp;赏</span><span>装成好像很多人打赏的样子</span></a>
+        </nav>
+    </div>
+
+
+
+        <div class="post-footer">
+            
+
+            
+<div class="page-share-wrap">
     
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://Jiangyue-way.github.io/posts/3bc207b7/&title=《hexo配置、如何写博客及更换电脑后更新博客》 — 西红柿~当当当~~&pic=https://Jiangyue-way.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://Jiangyue-way.github.io/posts/3bc207b7/&title=《hexo配置、如何写博客及更换电脑后更新博客》 — 西红柿~当当当~~&source=喜欢晴天，喜欢雨天" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://Jiangyue-way.github.io/posts/3bc207b7/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《hexo配置、如何写博客及更换电脑后更新博客》 — 西红柿~当当当~~&url=https://Jiangyue-way.github.io/posts/3bc207b7/&via=https://Jiangyue-way.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://Jiangyue-way.github.io/posts/3bc207b7/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
     </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
 
     
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/posts/4a17b156/" id="post-next" class="post-nav-link">
+        <h4 class="title" data-hover="下一篇：Hello World">下一篇：Hello World</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+    
+
+    
+<section class="comments" id="comments">
+    <div id="gitalk-container"></div>
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+        var gitalk = new Gitalk({
+            clientID: 'xxx',
+            clientSecret: 'xxx',
+            repo: 'xxx',
+            owner: 'xxx',
+            admin: ['xxx']
+        });
+        gitalk.render('gitalk-container');
+    </script>
+</section>
+
+
+    
+
+
+</article>
 
 </div>
 
@@ -434,8 +522,83 @@
 
     </main>
     
+        
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        <span>感谢您的鼓励支持！</span>
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" data-img="/img/dog.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.png">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechatPay">&nbsp;&nbsp;微信&nbsp;&nbsp;</span>
+                <span class="reward-toggle-item alipayPay">支付宝</span>
+            </div>
+        </label>
+        
+        <i class="icon icon-caret-up"></i>
+    </div>
+</div>
+
+
+    
     <div class="mask" id="mask"></div>
 <a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://Jiangyue-way.github.io/posts/3bc207b7/&title=《hexo配置、如何写博客及更换电脑后更新博客》 — 西红柿~当当当~~&pic=https://Jiangyue-way.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://Jiangyue-way.github.io/posts/3bc207b7/&title=《hexo配置、如何写博客及更换电脑后更新博客》 — 西红柿~当当当~~&source=喜欢晴天，喜欢雨天" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://Jiangyue-way.github.io/posts/3bc207b7/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《hexo配置、如何写博客及更换电脑后更新博客》 — 西红柿~当当当~~&url=https://Jiangyue-way.github.io/posts/3bc207b7/&via=https://Jiangyue-way.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://Jiangyue-way.github.io/posts/3bc207b7/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p class="wechatshare">扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACKElEQVR42u3aQU4DMRBE0dz/0kFixYIZflUHRNrfqwgxY79ZlOxuPx54PD/H19/3f7l/z9X/8/eUQ4YMGW/LeN4OPgFZYvosWZsMGTLOYaQhe/VsGqNXS+drkyFDhgzy6klA83llyJAhI30dCcoOI0OGDBmTQyzZOJJNJJ/rV87iMmTIeENG1xj4m9+/3t+QIUPGv2c8w0Ge5TN2a/hmRhkyZKxmkPbhJHx5jPKQDXa4MmTIWMFIL0B0e88OE1wgkyFDxjGMtNwWJDpuc6aFPxkyZJzA4NHGD5z3JI6JQ1+GDBlLGaSIxjdwPGQJNVihDBkyjmHwiOxSjhxQ0+KdDBkyTmB0RXkei92z3aeRIUPGCYz0IDo5P/IiXdCokCFDxlLG/DpXd2SdxPFlf0OGDBlLGWnAvbbEn8Z3eZlMhgwZb84gzUjevOzCtAtuGTJknMZIGwDdZCmYf0QZMmScw+AhOA9WXtpDu1oZMmSsZkxiNA1Z3hIgn+wHkgwZMhYxumMkj8LuEkZawpMhQ8aZjFcV2kibgTPQbREZMmSsY/A9Y/o6Htn8+BpcO5MhQ8YixjxMuzLc/VNxNMuQIWM1g49J0S29p9bNJUOGjN2MNAT55QxepOOBi3oaMmTIWMpIQzbd/JWnav6UDBkyZIR3NyZBXM4iQ4YMGbi5ODnojj6rDBkyDmB0xXqyNUxbmOVKZMiQsZqRNgZ44YwfWa/+Ul4LkyFDxh7GB+l1hJqihuQ6AAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
 
 
     <!-- waves按钮特效 -->
@@ -443,7 +606,7 @@
 
 <!-- 主题配置脚本 -->
 <script>
-var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
 </script>
 
 <!-- jquery -->
