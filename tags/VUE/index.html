@@ -6,7 +6,7 @@
     
     
     
-    <title>归档 | 西红柿~当当当~~</title>
+    <title>标签: VUE | 西红柿~当当当~~</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     
     <meta name="theme-color" content="#77AAFF">
@@ -43,7 +43,7 @@
 <meta name="keywords" content="前端">
 <meta property="og:type" content="website">
 <meta property="og:title" content="西红柿~当当当~~">
-<meta property="og:url" content="https://Jiangyue-way.github.io/archives/index.html">
+<meta property="og:url" content="https://Jiangyue-way.github.io/tags/VUE/index.html">
 <meta property="og:site_name" content="西红柿~当当当~~">
 <meta property="og:description" content="喜欢晴天，喜欢雨天">
 <meta property="og:locale" content="default">
@@ -92,7 +92,7 @@
                   </a>
               </li>
             
-              <li class="waves-block waves-effect active">
+              <li class="waves-block waves-effect">
                   <a href="/archives"  >
                     <i class="icon icon-lg icon-archives"></i>
                     <span>归 档</span><i class="icon icon-lg icon-caret-left"></i>
@@ -106,7 +106,7 @@
                   </a>
               </li>
             
-              <li class="waves-block waves-effect">
+              <li class="waves-block waves-effect active">
                   <a href="/tags"  >
                     <i class="icon icon-lg icon-tags"></i>
                     <span>标 签</span><i class="icon icon-lg icon-caret-left"></i>
@@ -151,7 +151,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">归档</div>
+        <div class="flex-col header-title ellipsis">标签: VUE</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -168,7 +168,7 @@
         </a>
     </div>
 </header>
-<header class="content-header archives-header">
+<header class="content-header tags-header">
     
     
     <div class="container fade-scale">
@@ -178,7 +178,19 @@
             </h1>
             <h5 class="subtitle">
                 
-                    <h1 class="archivestitle">路漫漫其修远兮</h1>
+                    <h1 id="pagetitle" class="archivestitle"></h1>
+                    <script>
+                        if(location.href.indexOf('about')!=-1){
+                            pagetitle.textContent = '西红柿🍅~';
+                        }else if(location.href.indexOf('tags')!=-1||location.href.indexOf('categories')!=-1){
+                            var a=location.href.substring(location.href.length-5,location.href.length-1);
+                            if(a==='tags'){
+                                pagetitle.textContent = '不积小流无以成江海';
+                            }else if(a==='ries'){
+                                pagetitle.textContent = '不积跬步无以至千里';
+                            }
+                        }
+                    </script>
                 
             </h5>
         </div>
@@ -186,25 +198,26 @@
 
 </header>
 
-<div class="container body-wrap fade">
-    
 
-    
+    <div class="container body-wrap fade">
+        
             
-            <h3 class="archive-separator">
-                <i class="icon icon-lg icon-folder-o"></i>&nbsp;&nbsp;
-                2018
-            </h3>
+            
+            <h5 class="tag-tip">
+                <i class="icon icon-tag"></i>
+                关于
+                <span style="color:rgb(100, 100, 100)">VUE</span>
+                共1篇文章
+            </h5>
             <div class="waterfall">
-    
-
-        <article class="archive-article" onclick="location.href='/posts/d3b9e1c2/'">
+            
+                <article class="archive-article" onclick="location.href='/posts/d3b9e1c2/'">
     <div class="archive-article-date">
       
       <time class="my-post-time">
         <i class="icon icon-lg icon-file-text-o"></i>
         &nbsp;
-          10-22
+          2018-10-22
       </time>
     </div>
     <div class="archive-article-inner">
@@ -224,65 +237,10 @@
 
     </div>
   </article>
+            
+            </div>
+        
 
-    
-
-        <article class="archive-article" onclick="location.href='/posts/3bc207b7/'">
-    <div class="archive-article-date">
-      
-      <time class="my-post-time">
-        <i class="icon icon-lg icon-file-text-o"></i>
-        &nbsp;
-          10-15
-      </time>
-    </div>
-    <div class="archive-article-inner">
-      
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a href="/posts/3bc207b7/">hexo配置、如何写博客及更换电脑后更新博客</a>
-    </h3>
-  
-
-
-
-      
-    </div>
-  </article>
-
-    
-
-        <article class="archive-article" onclick="location.href='/posts/4a17b156/'">
-    <div class="archive-article-date">
-      
-      <time class="my-post-time">
-        <i class="icon icon-lg icon-file-text-o"></i>
-        &nbsp;
-          10-15
-      </time>
-    </div>
-    <div class="archive-article-inner">
-      
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a href="/posts/4a17b156/">Hello World</a>
-    </h3>
-  
-
-
-
-      
-    </div>
-  </article>
-
-    
-    </div>
-
-    
 </div>
 
         <footer class="footer">
