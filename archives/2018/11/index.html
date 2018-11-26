@@ -6,7 +6,7 @@
     
     
     
-    <title>标签: vue | 西红柿~当当当~~</title>
+    <title>归档: 2018/11 | 西红柿~当当当~~</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     
     <meta name="theme-color" content="#77AAFF">
@@ -43,7 +43,7 @@
 <meta name="keywords" content="前端">
 <meta property="og:type" content="website">
 <meta property="og:title" content="西红柿~当当当~~">
-<meta property="og:url" content="https://Jiangyue-way.github.io/tags/vue/index.html">
+<meta property="og:url" content="https://Jiangyue-way.github.io/archives/2018/11/index.html">
 <meta property="og:site_name" content="西红柿~当当当~~">
 <meta property="og:description" content="喜欢晴天，喜欢雨天">
 <meta property="og:locale" content="default">
@@ -92,7 +92,7 @@
                   </a>
               </li>
             
-              <li class="waves-block waves-effect">
+              <li class="waves-block waves-effect active">
                   <a href="/archives"  >
                     <i class="icon icon-lg icon-archives"></i>
                     <span>归 档</span><i class="icon icon-lg icon-caret-left"></i>
@@ -106,7 +106,7 @@
                   </a>
               </li>
             
-              <li class="waves-block waves-effect active">
+              <li class="waves-block waves-effect">
                   <a href="/tags"  >
                     <i class="icon icon-lg icon-tags"></i>
                     <span>标 签</span><i class="icon icon-lg icon-caret-left"></i>
@@ -151,7 +151,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">标签: vue</div>
+        <div class="flex-col header-title ellipsis">归档</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -168,7 +168,7 @@
         </a>
     </div>
 </header>
-<header class="content-header tags-header">
+<header class="content-header archives-header">
     
     
     <div class="container fade-scale">
@@ -178,19 +178,7 @@
             </h1>
             <h5 class="subtitle">
                 
-                    <h1 id="pagetitle" class="archivestitle"></h1>
-                    <script>
-                        if(location.href.indexOf('about')!=-1){
-                            pagetitle.textContent = '西红柿🍅~';
-                        }else if(location.href.indexOf('tags')!=-1||location.href.indexOf('categories')!=-1){
-                            var a=location.href.substring(location.href.length-5,location.href.length-1);
-                            if(a==='tags'){
-                                pagetitle.textContent = '不积小流无以成江海';
-                            }else if(a==='ries'){
-                                pagetitle.textContent = '不积跬步无以至千里';
-                            }
-                        }
-                    </script>
+                    <h1 class="archivestitle">路漫漫其修远兮</h1>
                 
             </h5>
         </div>
@@ -198,26 +186,54 @@
 
 </header>
 
+<div class="container body-wrap fade">
+    
 
-    <div class="container body-wrap fade">
-        
+    
             
-            
-            <h5 class="tag-tip">
-                <i class="icon icon-tag"></i>
-                关于
-                <span style="color:rgb(100, 100, 100)">vue</span>
-                共1篇文章
-            </h5>
+            <h3 class="archive-separator">
+                <i class="icon icon-lg icon-folder-o"></i>&nbsp;&nbsp;
+                2018
+            </h3>
             <div class="waterfall">
-            
-                <article class="archive-article" onclick="location.href='/posts/bf3d2902/'">
+    
+
+        <article class="archive-article" onclick="location.href='/posts/2c432ced/'">
     <div class="archive-article-date">
       
       <time class="my-post-time">
         <i class="icon icon-lg icon-file-text-o"></i>
         &nbsp;
-          2018-11-06
+          11-26
+      </time>
+    </div>
+    <div class="archive-article-inner">
+      
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a href="/posts/2c432ced/">181119-181125</a>
+    </h3>
+  
+
+
+
+      
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VUE/">VUE</a></li></ul>
+
+    </div>
+  </article>
+
+    
+
+        <article class="archive-article" onclick="location.href='/posts/bf3d2902/'">
+    <div class="archive-article-date">
+      
+      <time class="my-post-time">
+        <i class="icon icon-lg icon-file-text-o"></i>
+        &nbsp;
+          11-06
       </time>
     </div>
     <div class="archive-article-inner">
@@ -237,10 +253,11 @@
 
     </div>
   </article>
-            
-            </div>
-        
 
+    
+    </div>
+
+    
 </div>
 
         <footer class="footer">
@@ -382,39 +399,6 @@ setInterval(function () {
 postshow();
 
 /* 座右铭 */
-
-   getHitokoto();
-
-
-
-/* 粘贴提示 */
-G($(".post-content"), location.href, "Lanyangyang~");
-
-
-/* 控制台 */
-if (window.console && window.console.log) {
-	setTimeout(function () {
-		console.log("\n %c 一个坏掉的番茄 %c  © Simon Ma  http://tomotoes.com \n\n", "color:#FFFFFB;background:#1abc9c;padding:5px 0;border-radius:.5rem 0 0 .5rem;", "color:#FFFFFB;background:#080808;padding:5px 0;border-radius:0 .5rem .5rem 0;");
-	}, 0);
-}
-
-</script>
-
-
-
-
-<!-- 公式渲染 -->
-
-
-
-<!-- 不蒜子 -->
-
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
-
-
-</body>
-</html>
-�� */
 
    getHitokoto();
 
