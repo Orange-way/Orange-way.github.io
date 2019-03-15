@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="喜欢晴天，喜欢雨天">
+    
+      <link rel="icon" href="/img/favicon.ico">
+    
+    <meta name="keyword"  content="">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+  <div class="page">
+    <div class="head">
+      <header class="head-header">
+  <h1 class="head-authorH">
+    <a href="/" class="head-authorLink">
+      橙子</a>
+  </h1>
+  <div class="head-right">
+    <!-- <div class="head-search">
+      <input class="head-searchK"></input>
+      <span class="head-searchT">
+        </span>
+    </div> -->
+    <button class="barWrap" id="barWrap-toggle">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <div class="head-about" id="head-about">
+      
+      <a class="head-aboutLink" href="/about">
+        About</a>
+      
+    </div>
+  </div>
+</header>
+    </div>
+    <div class="main">
+        <div class="barShow-head" id="barShow">
+  <ul class="barShow-ul">
+    
+      <li class="barShow-item">
+        <a href="/archives"><span>
+            Archives</span></a>
+      </li>
+    
+      <li class="barShow-item">
+        <a href="/categories/life"><span>
+            Lifes</span></a>
+      </li>
+    
+      <li class="barShow-item">
+        <a href="/tags"><span>
+            Tags</span></a>
+      </li>
+    
+    
+      <li class="barShow-item">
+        <a class="head-aboutLink" href="/about">
+          About
+        </a>
+      </li>
+    
+  </ul>
+</div>
+      <article class="post" id="post">
+  <header class="post-head">
+    <h1 class="post-title">
+      <a class="title" href="/posts/6e179f43/">
+        react入门
+      </a>
+    </h1>
+  </header>
+  <div class="post-datetag">
+    <div class="post-date">
+      <time class="post-time" title="2019-03-14 10:45:19" datetime="2019-03-14T02:45:19.000Z" itemprop="datePublished">
+  2019-03-14</time>
+    </div>
+    <div class="post-tag">
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react/">react</a></li></ul>
+
+    </div>
+  </div>
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>&#x200B;    &#x5F00;&#x59CB;&#x5B66;&#x4E60;react&#x4E86;&#xFF0C;&#x603B;&#x542C;&#x4EBA;&#x8BF4;react&#x6BD4;vue&#x8981;&#x590D;&#x6742;&#xFF0C;&#x6240;&#x4EE5;&#x5B66;&#x7684;&#x65F6;&#x5019;&#x603B;&#x628A;&#x4E24;&#x4E2A;&#x6846;&#x67B6;&#x5B9E;&#x73B0;&#x540C;&#x4E00;&#x4E2A;&#x529F;&#x80FD;&#x7684;&#x65B9;&#x5F0F;&#x5BF9;&#x6BD4;&#xFF0C;&#x55EF;&#xFF0C;&#x786E;&#x5B9E;&#x89C9;&#x5F97;vue&#x7B80;&#x5355;&#x4E00;&#x70B9;&#x54C8;&#x54C8;&#x54C8;&#xFF01;&#x597D;&#x4E86;&#xFF0C;&#x5F00;&#x59CB;&#x8BB0;&#x5F55;react&#x7684;&#x5B66;&#x4E60;&#x603B;&#x7ED3;&#xFF0C;&#x5F88;&#x611F;&#x8C22;<a href="http://huziketang.mangojuice.top/books/react/" target="_blank" rel="noopener">react &#x5C0F;&#x4E66;</a>, &#x6211;&#x89C9;&#x5F97;&#x5199;&#x7684;&#x5F88;&#x597D;<a id="more"></a></p>
+<p>&#x200B;        </p>
+<h4 id="&#x5B89;&#x88C5;&#x3001;&#x521B;&#x5EFA;react&#x9879;&#x76EE;"><a href="#&#x5B89;&#x88C5;&#x3001;&#x521B;&#x5EFA;react&#x9879;&#x76EE;" class="headerlink" title="&#x5B89;&#x88C5;&#x3001;&#x521B;&#x5EFA;react&#x9879;&#x76EE;"></a>&#x5B89;&#x88C5;&#x3001;&#x521B;&#x5EFA;react&#x9879;&#x76EE;</h4><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#x9996;&#x5148;&#x786E;&#x4FDD;&#x5B89;&#x88C5;&#x4E86;node&#x548C;npm</span><br><span class="line">npm install -g create-react-app  //&#x5B89;&#x88C5;create-react-app &#x547D;&#x4EE4;&#xFF0C;&#x8FD9;&#x4E2A;&#x662F;&#x7528;&#x6765;&#x521B;&#x5EFA;react&#x9879;&#x76EE;&#x7684;</span><br><span class="line">create-react-app react-pritice   //&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;&#x540D;&#x4E3A;react-pritice&#x7684;react&#x9879;&#x76EE;</span><br><span class="line"><span class="built_in">cd</span> react-pritice                 //&#x8FDB;&#x5165;&#x8FD9;&#x4E2A;&#x9879;&#x76EE;&#x91CC;</span><br><span class="line">npm start                        //&#x542F;&#x52A8;&#x9879;&#x76EE;&#xFF0C;&#x9879;&#x76EE;&#x8FD0;&#x884C;&#x8D77;&#x6765;&#x4E86;</span><br></pre></td></tr></tbody></table></figure>
+<h4 id="JSX&#x8BED;&#x6CD5;"><a href="#JSX&#x8BED;&#x6CD5;" class="headerlink" title="JSX&#x8BED;&#x6CD5;"></a>JSX&#x8BED;&#x6CD5;</h4><p>&#x8FD9;&#x4E2A;&#x90E8;&#x5206;&#x770B;<a href="http://huziketang.mangojuice.top/books/react/lesson6" target="_blank" rel="noopener">react &#x5C0F;&#x4E66;</a>, &#x770B;&#x5B83;&#x5C31;&#x61C2;&#x4E86;&#xFF0C;&#x5176;&#x4E2D;&#x8BF4;react&#x4E3A;&#x4E86;&#x80FD;&#x76F4;&#x63A5;&#x5728;js&#x4E2D;&#x5199;html&#xFF0C;&#x6240;&#x4EE5;&#x6269;&#x5C55;&#x4E86;js&#x7136;&#x540E;&#x6210;&#x4E86;jsx&#xFF0C;  <strong>JSX &#x5176;&#x5B9E;&#x5C31;&#x662F; JavaScript &#x5BF9;&#x8C61;</strong>&#xFF0C;&#x770B;&#x5B8C;&#x8FD9;&#x90E8;&#x5206;&#x6211;&#x7684;&#x7406;&#x89E3;&#x662F;&#xFF0C;jsx&#x4EA7;&#x751F;&#x7684;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x4E0A;&#x6709;&#x4E09;&#x4E2A;&#x5C5E;&#x6027;&#xFF0C;&#x5206;&#x522B;&#x662F; tags&#x3001;attr&#x3001;children&#xFF0C;&#x7136;&#x540E;&#x901A;&#x8FC7;ReactDom.render()&#x6E32;&#x67D3;&#x51FA;dom&#xFF0C;&#x7136;&#x540E;&#x63D2;&#x5165;&#x9875;&#x9762;</p>
+<p>&#x200B;                    </p>
+<h4 id="&#x51FD;&#x6570;&#x7EC4;&#x4EF6;&#x548C;&#x7C7B;&#x7EC4;&#x4EF6;"><a href="#&#x51FD;&#x6570;&#x7EC4;&#x4EF6;&#x548C;&#x7C7B;&#x7EC4;&#x4EF6;" class="headerlink" title="&#x51FD;&#x6570;&#x7EC4;&#x4EF6;&#x548C;&#x7C7B;&#x7EC4;&#x4EF6;"></a>&#x51FD;&#x6570;&#x7EC4;&#x4EF6;&#x548C;&#x7C7B;&#x7EC4;&#x4EF6;</h4><p>&#x51FD;&#x6570;&#x7EC4;&#x4EF6;&#xFF1A;&#x5BF9;&#x6BD4;&#x7C7B;&#x7EC4;&#x4EF6;&#xFF0C;&#x63A5;&#x6536;props&#xFF0C;&#x53EA;&#x7528;&#x6765;&#x5C55;&#x793A;&#x9875;&#x9762;&#xFF0C;&#x6CA1;&#x6709;this&#xFF0C;&#x65E0;&#x6CD5;&#x4F7F;&#x7528;&#x751F;&#x547D;&#x5468;&#x671F;</p>
+<p>&#x7C7B;&#x7EC4;&#x4EF6;&#xFF1A;this &#x3001;&#x751F;&#x547D;&#x5468;&#x671F;&#x7B49;&#x90FD;&#x662F;&#x6709;&#x7684;</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">import React, {Component} from &apos;react&apos;</span><br><span class="line"></span><br><span class="line">//&#x51FD;&#x6570;&#x7EC4;&#x4EF6;&#xFF1A;</span><br><span class="line">function FuncComp(props)  {</span><br><span class="line">  return (</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &lt;p&gt;&#x65E5;&#x671F;&#xFF1A;{props.date}&lt;/p&gt;</span><br><span class="line">      &lt;p&gt;&#x5929;&#x6C14;&#xFF1A;{props.weather}&lt;/p&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  )</span><br><span class="line">}</span><br><span class="line">//&#x7C7B;&#x7EC4;&#x4EF6;</span><br><span class="line">class LeiComp extends Component{</span><br><span class="line">  state = {</span><br><span class="line">    date: &apos;2019-1-1&apos;,</span><br><span class="line">    weather: &apos;&#x6674;&apos;</span><br><span class="line">  }</span><br><span class="line">  render () {</span><br><span class="line">    return (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;h2&gt;&#x5177;&#x4F53;&#x7684;&#x4FE1;&#x606F;&#x5982;&#x4E0B;&#xFF1A;&lt;/h2&gt;</span><br><span class="line">        &lt;FuncComp date={this.state.date} weather={this.state.weather}&gt;&lt;/FuncComp&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    )</span><br><span class="line">  }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">export default LeiComp</span><br></pre></td></tr></tbody></table></figure>
+<p>&#x672C;&#x6B21;&#x603B;&#x7ED3;&#x5230;&#x8FD9;&#x91CC;&#xFF0C;&#x5176;&#x4ED6;&#x7684;&#x7528;&#x4E00;&#x4E2A;Todolist&#x7684;&#x5C0F;&#x7EC3;&#x4E60;&#x6765;&#x603B;&#x7ED3;</p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+    
+  </div>
+</article>
+
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#安装、创建react项目"><span class="post-toc-number">1.</span> <span class="post-toc-text">安装、创建react项目</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#JSX语法"><span class="post-toc-number">2.</span> <span class="post-toc-text">JSX语法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#函数组件和类组件"><span class="post-toc-number">3.</span> <span class="post-toc-text">函数组件和类组件</span></a></li></ol>
+        </nav>
+    </aside>
+   
+    </div>
+    <footer class="footer-nav">
+      
+  <span class="footer-msg">
+    2018
+    
+    
+    <span class="timeDivide">-</span>
+    
+    Orange~.&nbsp;
+    Power by
+    <a href="https://hexo.io/" target="_blank" rel="external nofollow">Hexo</a>
+    and
+    <a class="orangelink" href="https://github.com/" target="_blank" rel="">
+      orange</a>
+  </span>
+
+    </footer>
+    <div class="back-top" id="back-top">
+      <i class="back-top-icon"></i>
+    </div>
+    
+  
+  <script src="/js/jquery/jquery-3.1.1.min.js"></script>
+
+    <script src="/js/theme.js"></script>
+    <script src="/js/index.js"></script>
+  
+  </div>
+</body>

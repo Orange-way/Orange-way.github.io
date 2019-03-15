@@ -72,6 +72,9 @@ img {
   width: 75%;
   float: left;
 }
+.main > .post .article-entry p {
+  line-height: 25px;
+}
 .page .footer-nav {
   display: block;
   width: 90%;
@@ -686,4 +689,15 @@ code {
     opacity: 0;
     height: 0px;
   }
+}
+.about {
+  margin-top: 30px;
+  line-height: 20px;
+  font-size: 15px;
+  text-indent: 2em;
+  color: #333;
+  font-weight: 300;
+}
+.about img {
+  width: 100%;
 }

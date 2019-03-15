@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="喜欢晴天，喜欢雨天">
+    
+      <link rel="icon" href="/img/favicon.ico">
+    
+    <meta name="keyword"  content="">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+  <div class="page">
+    <div class="head">
+      <header class="head-header">
+  <h1 class="head-authorH">
+    <a href="/" class="head-authorLink">
+      橙子</a>
+  </h1>
+  <div class="head-right">
+    <!-- <div class="head-search">
+      <input class="head-searchK"></input>
+      <span class="head-searchT">
+        </span>
+    </div> -->
+    <button class="barWrap" id="barWrap-toggle">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <div class="head-about" id="head-about">
+      
+      <a class="head-aboutLink" href="/about">
+        About</a>
+      
+    </div>
+  </div>
+</header>
+    </div>
+    <div class="main">
+        <div class="barShow-head" id="barShow">
+  <ul class="barShow-ul">
+    
+      <li class="barShow-item">
+        <a href="/archives"><span>
+            Archives</span></a>
+      </li>
+    
+      <li class="barShow-item">
+        <a href="/categories/life"><span>
+            Lifes</span></a>
+      </li>
+    
+      <li class="barShow-item">
+        <a href="/tags"><span>
+            Tags</span></a>
+      </li>
+    
+    
+      <li class="barShow-item">
+        <a class="head-aboutLink" href="/about">
+          About
+        </a>
+      </li>
+    
+  </ul>
+</div>
+      <article class="post" id="post">
+  <header class="post-head">
+    <h1 class="post-title">
+      <a class="title" href="/posts/2cbb36fa/">
+        vue中router-link的class
+      </a>
+    </h1>
+  </header>
+  <div class="post-datetag">
+    <div class="post-date">
+      <time class="post-time" title="2019-03-15 14:58:36" datetime="2019-03-15T06:58:36.000Z" itemprop="datePublished">
+  2019-03-15</time>
+    </div>
+    <div class="post-tag">
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li></ul>
+
+    </div>
+  </div>
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>router-link&#x4E2D;&#x53EF;&#x4EE5;&#x52A8;&#x6001;&#x7ED1;&#x5B9A;class&#xFF0C;&#x8FD9;&#x91CC;&#x603B;&#x7ED3;<code>router-link-active</code> &#xFF0C;vue&#x5B9E;&#x73B0;&#x7684;&#x6548;&#x679C;&#x5982;&#x4E0B;&#xFF1A;<a id="more"></a></p>
+<p><img src="/posts/2cbb36fa/one.png" alt=""></p>
+<p>&#x200B;                        </p>
+<p>&#x53EA;&#x9700;&#x8981;&#x6DFB;&#x52A0; <code>router-link-active</code> &#x8FD9;&#x4E2A;class&#x7684;css&#x6837;&#x5F0F;&#xFF0C;&#x5728;rouer-link&#x4E2D;&#x4EC0;&#x4E48;&#x90FD;&#x4E0D;&#x9700;&#x8981;&#x5199;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;Router-link to=<span class="string">&quot;/home&quot;</span> tag=<span class="string">&quot;li&quot;</span>&gt;&#x9996;&#x9875;&lt;<span class="regexp">/Router-link&gt;</span></span><br><span class="line"><span class="regexp">&lt;Router-link to=&quot;/</span>comment<span class="string">&quot; tag=&quot;</span>li<span class="string">&quot;&gt;&#x8BC4;&#x8BBA;&lt;/Router-link&gt;</span></span><br><span class="line"><span class="string">&lt;Router-link to=&quot;</span>/person<span class="string">&quot; tag=&quot;</span>li<span class="string">&quot;&gt;&#x4E2A;&#x4EBA;&#x4E2D;&#x5FC3;&lt;/Router-link&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">.router-link-active{</span></span><br><span class="line"><span class="string">  background: pink;</span></span><br><span class="line"><span class="string">  color: #555;</span></span><br><span class="line"><span class="string">}</span></span><br></pre></td></tr></tbody></table></figure>
+<p>&#x200B;                </p>
+<p>&#x5F53;&#x7136;&#x8981;&#x662F;&#x5ACC; &#x8FD9;&#x4E2A;class&#x540D;&#x592A;&#x957F;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x6539;&#xFF0C;</p>
+<p>&#x65B9;&#x6CD5;&#x4E00;&#xFF1A;</p>
+<p>&#x5728;router/index.js&#x4E2D;&#x505A;&#x5982;&#x4E0B;&#x914D;&#x7F6E;:</p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">&apos;vue&apos;</span></span><br><span class="line"><span class="keyword">import</span> Router <span class="keyword">from</span> <span class="string">&apos;vue-router&apos;</span></span><br><span class="line"></span><br><span class="line">Vue.use(Router)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> Router({</span><br><span class="line">  routes: [],</span><br><span class="line">  linkActiveClass: <span class="string">&apos;is-active&apos;</span>    <span class="comment">//&#x6DFB;&#x52A0;&#x8FD9;&#x53E5;</span></span><br><span class="line">})</span><br><span class="line"></span><br><span class="line">.is-active{</span><br><span class="line">  background: pink;</span><br><span class="line">  color: #555;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>&#x65B9;&#x6CD5;&#x4E8C;&#xFF1A;</p>
+<p>&#x76F4;&#x63A5;&#x5728;rout-link&#x90A3;&#x91CC;&#x66F4;&#x6539;&#xFF1A;</p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;Router-link to=<span class="string">&quot;/home&quot;</span> tag=<span class="string">&quot;li&quot;</span> active-<span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;is-active&quot;</span>&gt;&#x9996;&#x9875;&lt;<span class="regexp">/Router-link&gt;</span></span><br><span class="line"><span class="regexp">&lt;Router-link to=&quot;/</span>comment<span class="string">&quot; tag=&quot;</span>li<span class="string">&quot; active-class=&quot;</span>is-active<span class="string">&quot;&gt;&#x8BC4;&#x8BBA;&lt;/Router-link&gt;</span></span><br><span class="line"><span class="string">&lt;Router-link to=&quot;</span>/person<span class="string">&quot; tag=&quot;</span>li<span class="string">&quot; active-class=&quot;</span>is-active<span class="string">&quot;&gt;&#x4E2A;&#x4EBA;&#x4E2D;&#x5FC3;&lt;/Router-link&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+<p>&#x4EE5;&#x4E0A;&#x4E24;&#x79CD;&#x90FD;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x5728;&#x5BFC;&#x822A;&#x5207;&#x6362;&#x65F6;&#xFF0C;&#x6837;&#x5F0F;&#x4E5F;&#x5728;&#x8DDF;&#x7740;&#xFF0C;&#x4F46;&#x73B0;&#x5728;&#x6709;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x5047;&#x8BBE;&#x73B0;&#x5728;&#x6709;&#x4E2A;&#x52A8;&#x6001;&#x8DEF;&#x7531;&#xFF0C;&#x4F46;&#x53EF;&#x80FD;&#x4ECE;&#x8BC4;&#x8BBA;&#x9875;&#x9762;&#x53EF;&#x80FD;&#x8DF3;&#x5230;&#x8FD9;&#x4E2A;&#x9875;&#x9762;&#xFF0C;&#x4E5F;&#x53EF;&#x80FD;&#x4ECE;&#x4E2A;&#x4EBA;&#x4E2D;&#x5FC3;&#x8DF3;&#x5230;&#x8FD9;&#x4E2A;&#x9875;&#x9762;&#xFF0C;&#x90A3;&#x73B0;&#x5728;&#x8981;&#x6C42;&#x5F53;&#x8DF3;&#x5230;&#x8FD9;&#x4E2A;&#x8DEF;&#x7531;&#x65F6;&#xFF0C;&#x4ECE;&#x54EA;&#x4E2A;&#x8DF3;&#x8FC7;&#x53BB;&#xFF0C;&#x54EA;&#x4E2A;&#x5C31;&#x4FDD;&#x6301;activeClass&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="/posts/2cbb36fa/two.png" alt=""></p>
+<p>&#x4E00;&#x79CD;&#x529E;&#x6CD5;&#x662F;&#x6DFB;&#x52A0;&#x70B9;&#x51FB;&#x4E8B;&#x4EF6;&#xFF0C;&#x5728;&#x70B9;&#x51FB;&#x4E8B;&#x4EF6;&#x4E2D;&#x6765;&#x52A8;&#x6001;&#x589E;&#x52A0;&#x5220;&#x9664;class&#xFF0C;&#x8FD8;&#x6709;&#x4E00;&#x79CD;&#x529E;&#x6CD5;&#x662F;&#x5229;&#x7528;&#x8DEF;&#x7531;&#x5143;&#x4FE1;&#x606F;&#x6765;&#x5199;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>1 &#x5728;&#x53EF;&#x80FD;&#x4F1A;&#x8DF3;&#x8F6C;&#x5230;&#x6B64;&#x8DEF;&#x7531;&#x4E2D;&#x914D;&#x7F6E;&#x8DEF;&#x7531;&#x4FE1;&#x606F;&#xFF08;&#x8FD9;&#x91CC;&#x914D;&#x7F6E;&#x4E86;/home&#xFF0C;/person&#xFF09;&#xFF1A;</p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">	{</span><br><span class="line">     path: <span class="string">&apos;/home&apos;</span>,</span><br><span class="line">     name: <span class="string">&apos;Home&apos;</span>,</span><br><span class="line">     component: Home,</span><br><span class="line">     meta: {</span><br><span class="line">       requiresAuth: <span class="literal">true</span>,</span><br><span class="line">       active: <span class="string">&apos;/cont&apos;</span></span><br><span class="line">     }</span><br><span class="line">   },</span><br><span class="line">   {</span><br><span class="line">     path: <span class="string">&apos;/cont&apos;</span>,</span><br><span class="line">     name: <span class="string">&apos;HomeCont&apos;</span>,</span><br><span class="line">     component: HomeCont,</span><br><span class="line">     meta: {</span><br><span class="line">       requiresAuth: <span class="literal">true</span>,</span><br><span class="line">       active: <span class="string">&apos;/cont&apos;</span></span><br><span class="line">     },</span><br><span class="line">     beforeEnter(to, <span class="keyword">from</span>, next) {</span><br><span class="line">       <span class="keyword">if</span>(<span class="keyword">from</span>.meta.active === <span class="string">&apos;/cont&apos;</span>){</span><br><span class="line">         to.meta.active = <span class="keyword">from</span>.path;</span><br><span class="line">       }</span><br><span class="line">       next()</span><br><span class="line">     }</span><br><span class="line">   },</span><br><span class="line">   {</span><br><span class="line">     path: <span class="string">&apos;/comment&apos;</span>,</span><br><span class="line">     name: <span class="string">&apos;comment&apos;</span>,</span><br><span class="line">     component: Comment</span><br><span class="line">   },</span><br><span class="line">   {</span><br><span class="line">     path: <span class="string">&apos;/person&apos;</span>,</span><br><span class="line">     name: <span class="string">&apos;person&apos;</span>,</span><br><span class="line">     component: Person,</span><br><span class="line">     meta: {</span><br><span class="line">       requiresAuth: <span class="literal">true</span>,</span><br><span class="line">       active: <span class="string">&apos;/cont&apos;</span></span><br><span class="line">     }</span><br><span class="line">   }</span><br><span class="line"></span><br><span class="line">&lt;Router-link to=<span class="string">&quot;/home&quot;</span> tag=<span class="string">&quot;li&quot;</span> :<span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;{&apos;is-active&apos;:$route.meta.active === &apos;/home&apos;}&quot;</span>&gt;&#x9996;&#x9875;&lt;<span class="regexp">/Router-link&gt;</span></span><br><span class="line"><span class="regexp">   &lt;Router-link to=&quot;/</span>comment<span class="string">&quot; tag=&quot;</span>li<span class="string">&quot;&gt;&#x8BC4;&#x8BBA;&lt;/Router-link&gt;</span></span><br><span class="line"><span class="string">   &lt;Router-link to=&quot;</span>/person<span class="string">&quot; tag=&quot;</span>li<span class="string">&quot; :class=&quot;</span>{<span class="string">&apos;is-active&apos;</span>:$route.meta.active === <span class="string">&apos;/person&apos;</span>}<span class="string">&quot;&gt;&#x4E2A;&#x4EBA;&#x4E2D;&#x5FC3;&lt;/Router-link&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+<p>&#x200B;    1 &#x7ED9;&#x6240;&#x6709;&#x53EF;&#x80FD;&#x4F1A;&#x8DF3;&#x5230;&#x8FD9;&#x4E2A;&#x8DEF;&#x7531;&#x7684;&#x5730;&#x65B9;&#x914D;&#x7F6E;meta&#xFF0C;&#x5E76;&#x8D4B;&#x7ED9;&#x76F8;&#x540C;&#x7684;active&#x5C5E;&#x6027;<br>&#x200B;        2 &#x5728;rout-link&#x4E2D; &#x52A8;&#x6001;&#x6DFB;&#x52A0; is-active<br>&#x200B;        3 &#x5728;beforEnter&#x4E2D;&#x5224;&#x65AD;&#xFF0C;&#x628A;&#x52A8;&#x6001;&#x8DEF;&#x7531;&#x7684;to.meta.active = from.path&#xFF08;&#x8FD9;&#x91CC;&#x6211;&#x7528;&#x7684;&#x662F;path&#x6765;&#x5224;&#x65AD;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x81EA;&#x5B9A;&#x4E49;&#x6210;&#x522B;&#x7684;&#xFF09;</p>
+<p>&#x200B;    4 &#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x8FD9;&#x4E2A;&#x529F;&#x80FD;&#x4E86;&#xFF0C;&#x4F46;&#x662F;&#xFF0C;&#x53D1;&#x73B0;&#x5982;&#x679C;&#x9875;&#x9762;&#x5237;&#x65B0;&#xFF0C;&#x90A3;&#x5C31;&#x5931;&#x6548;&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x914D;&#x5408;localStorage&#x6765;&#x5B8C;&#x5584;</p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//&#x5728;router&#x4E2D;localStorage&#x5B58;&#x5165;</span></span><br><span class="line">	beforeEnter(to, <span class="keyword">from</span>, next) {</span><br><span class="line">        <span class="keyword">if</span>(<span class="keyword">from</span>.meta.active === <span class="string">&apos;/cont&apos;</span>){</span><br><span class="line">          to.meta.active = <span class="keyword">from</span>.path;</span><br><span class="line">          localStorage.setItem(<span class="string">&apos;/cont&apos;</span>, to.meta.active)  <span class="comment">//&#x6DFB;&#x52A0;&#x8FD9;&#x53E5;</span></span><br><span class="line">        }</span><br><span class="line">        next()</span><br><span class="line">      }</span><br><span class="line"><span class="comment">//&#x5728;cont.vue&#x4E2D;&#x83B7;&#x53D6;</span></span><br><span class="line">   created () {</span><br><span class="line">     <span class="keyword">this</span>.$route.meta.active = localStorage.getItem(<span class="string">&apos;/cont&apos;</span>) || <span class="keyword">this</span>.$route.meta.active;</span><br><span class="line">   }</span><br></pre></td></tr></tbody></table></figure>
+<p>&#x8FD9;&#x6837;&#xFF0C;&#x8FD9;&#x4E2A;&#x529F;&#x80FD;&#x5C31;&#x7B97;&#x57FA;&#x672C;&#x5B8C;&#x5584;&#x4E86;&#xFF0C;&#x76EE;&#x524D;&#x80FD;&#x60F3;&#x5230;&#x7684;&#x662F;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#xFF0C;&#x540E;&#x9762;&#x82E5;&#x662F;&#x6709;&#x5176;&#x4ED6;&#x7684;&#x518D;&#x6765;&#x66F4;&#x65B0;</p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+    
+  </div>
+</article>
+
+    </div>
+    <footer class="footer-nav">
+      
+  <span class="footer-msg">
+    2018
+    
+    
+    <span class="timeDivide">-</span>
+    
+    Orange~.&nbsp;
+    Power by
+    <a href="https://hexo.io/" target="_blank" rel="external nofollow">Hexo</a>
+    and
+    <a class="orangelink" href="https://github.com/" target="_blank" rel="">
+      orange</a>
+  </span>
+
+    </footer>
+    <div class="back-top" id="back-top">
+      <i class="back-top-icon"></i>
+    </div>
+    
+  
+  <script src="/js/jquery/jquery-3.1.1.min.js"></script>
+
+    <script src="/js/theme.js"></script>
+    <script src="/js/index.js"></script>
+  
+  </div>
+</body>

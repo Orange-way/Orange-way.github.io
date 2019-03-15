@@ -72,6 +72,9 @@ img {
   width: 75%;
   float: left;
 }
+.main > .post .article-entry p {
+  line-height: 25px;
+}
 .page .footer-nav {
   display: block;
   width: 90%;
