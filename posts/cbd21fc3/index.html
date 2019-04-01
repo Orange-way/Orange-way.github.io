@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="喜欢晴天，喜欢雨天">
+    
+      <link rel="icon" href="/img/favicon.ico">
+    
+    <meta name="keyword"  content="">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+  <div class="page">
+    <div class="head">
+      <header class="head-header">
+  <h1 class="head-authorH">
+    <a href="/" class="head-authorLink">
+      橙子</a>
+  </h1>
+  <div class="head-right">
+    <!-- <div class="head-search">
+      <input class="head-searchK"></input>
+      <span class="head-searchT">
+        </span>
+    </div> -->
+    <button class="barWrap" id="barWrap-toggle">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <div class="head-about" id="head-about">
+      
+      <a class="head-aboutLink" href="/about">
+        About</a>
+      
+    </div>
+  </div>
+</header>
+    </div>
+    <div class="main">
+        <div class="barShow-head" id="barShow">
+  <ul class="barShow-ul">
+    
+      <li class="barShow-item">
+        <a href="/archives"><span>
+            Archives</span></a>
+      </li>
+    
+      <li class="barShow-item">
+        <a href="/categories/life"><span>
+            Lifes</span></a>
+      </li>
+    
+      <li class="barShow-item">
+        <a href="/tags"><span>
+            Tags</span></a>
+      </li>
+    
+    
+      <li class="barShow-item">
+        <a class="head-aboutLink" href="/about">
+          About
+        </a>
+      </li>
+    
+  </ul>
+</div>
+      <article class="post" id="post">
+  <header class="post-head">
+    <h1 class="post-title">
+      <a class="title" href="/posts/cbd21fc3/">
+        vue 中图片的处理
+      </a>
+    </h1>
+  </header>
+  <div class="post-datetag">
+    <div class="post-date">
+      <time class="post-time" title="2019-04-01 15:46:15" datetime="2019-04-01T07:46:15.000Z" itemprop="datePublished">
+  2019-04-01</time>
+    </div>
+    <div class="post-tag">
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li></ul>
+
+    </div>
+  </div>
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>vue &#x4E2D;&#x56FE;&#x7247;&#x53EF;&#x80FD;&#x53EA;&#x662F;&#x7528;&#x4E8E;&#x5C55;&#x793A;&#xFF0C;&#x53EF;&#x80FD;&#x662F;&#x88C1;&#x526A;&#xFF0C;&#x53EF;&#x80FD;&#x662F;&#x70B9;&#x51FB;&#x56FE;&#x7247;&#x8FDB;&#x884C;&#x8DF3;&#x8F6C;<a id="more"></a></p>
+<p>&#x200B;                </p>
+<h4 id="&#x56FE;&#x7247;&#x52A0;&#x8F7D;&#x5931;&#x8D25;"><a href="#&#x56FE;&#x7247;&#x52A0;&#x8F7D;&#x5931;&#x8D25;" class="headerlink" title="&#x56FE;&#x7247;&#x52A0;&#x8F7D;&#x5931;&#x8D25;"></a>&#x56FE;&#x7247;&#x52A0;&#x8F7D;&#x5931;&#x8D25;</h4><p>&#x5F53;&#x83B7;&#x53D6;&#x7684;&#x56FE;&#x7247;&#x6B63;&#x5E38;&#x52A0;&#x8F7D;&#x65F6;&#x5BF9;&#x9875;&#x9762;&#x662F;&#x6CA1;&#x6709;&#x5F71;&#x54CD;&#x7684;&#xFF0C;&#x4F46;&#x5F53;&#x56FE;&#x7247;&#x52A0;&#x8F7D;&#x5931;&#x8D25;&#x65F6;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x5BF9;&#x5E03;&#x5C40;&#x9020;&#x6210;&#x5F71;&#x54CD;&#x6216;&#x8005;&#x662F;&#x4E00;&#x4E2A;&#x52A0;&#x8F7D;&#x5931;&#x8D25;&#x7684;&#x56FE;&#x6807;&#xFF08;&#x96BE;&#x770B;&#xFF09;&#xFF0C;&#x6240;&#x4EE5;&#x8981;&#x5904;&#x7406;&#x5728;&#x56FE;&#x7247;&#x52A0;&#x8F7D;&#x95EE;&#x9898;</p>
+<p>&#x9996;&#x5148;&#xFF0C;&#x8981;&#x6709;&#x4E2A;&#x9ED8;&#x8BA4;&#x56FE;&#x7247;&#xFF0C;&#x56FE;&#x7247;url&#x4E0D;&#x5B58;&#x5728;&#x65F6;&#x5C31;&#x663E;&#x793A;&#x8FD9;&#x5F20;&#xFF0C;&#x5F53;&#x56FE;&#x7247;&#x5B58;&#x5728;&#x4F46;url&#x65E0;&#x6548;&#x65F6;&#x4E5F;&#x663E;&#x793A;&#x8FD9;&#x5F20;&#xFF1A;</p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// &#x6CE8;&#x610F;&#x5F15;&#x5165;&#x672C;&#x5730;&#x56FE;&#x7247;&#x65F6;&#x8981;&#x4F7F;&#x7528;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#xFF0C;&#x5426;&#x5219;&#x65E0;&#x6CD5;&#x5F15;&#x5165;</span></span><br><span class="line">albumImgUnloadSrc: <span class="built_in">require</span>(<span class="string">&apos;../../../assets/unload4.png&apos;</span>),  </span><br><span class="line"></span><br><span class="line">&lt;img v-<span class="keyword">if</span>=<span class="string">&quot;albumIcon&quot;</span> :src=<span class="string">&quot;albumIcon&quot;</span> @error=<span class="string">&quot;albumImgError&quot;</span>&gt;</span><br><span class="line">&lt;img v-<span class="keyword">else</span> :src=<span class="string">&quot;albumImgUnloadSrc&quot;</span> @error=<span class="string">&quot;albumImgError&quot;</span>&gt;</span><br><span class="line">    </span><br><span class="line"><span class="comment">//&#x4E13;&#x8F91;&#x56FE;&#x7247;&#x52A0;&#x8F7D;&#x5931;&#x8D25;</span></span><br><span class="line">albumImgError() {</span><br><span class="line">  <span class="keyword">this</span>.albumIcon = <span class="keyword">this</span>.albumImgUnloadSrc;</span><br><span class="line">},</span><br></pre></td></tr></tbody></table></figure>
+<p>&#x200B;                </p>
+<h4 id="&#x56FE;&#x7247;&#x62D6;&#x52A8;&#x53CA;&#x88C1;&#x526A;"><a href="#&#x56FE;&#x7247;&#x62D6;&#x52A8;&#x53CA;&#x88C1;&#x526A;" class="headerlink" title="&#x56FE;&#x7247;&#x62D6;&#x52A8;&#x53CA;&#x88C1;&#x526A;"></a>&#x56FE;&#x7247;&#x62D6;&#x52A8;&#x53CA;&#x88C1;&#x526A;</h4><p>&#x6709;&#x65F6;&#x4F1A;&#x7528;&#x56FE;&#x7247;&#x62D6;&#x52A8;&#x53CA;&#x88C1;&#x526A;&#xFF0C;&#x6BD4;&#x5982;&#x4E0A;&#x4F20;&#x56FE;&#x7247;&#x540E;&#x83B7;&#x53D6;&#x5176;&#x4E2D;&#x4E00;&#x90E8;&#x5206;</p>
+<p>&#x73B0;&#x5728;&#x5047;&#x8BBE;&#x4E0A;&#x4F20;&#x7684;&#x662F;&#x4E00;&#x4E2A;1920x650&#x7684;&#x56FE;&#x7247;&#xFF1A;</p>
+<p><img src="/posts/cbd21fc3/one.jpg" alt=""></p>
+<p>&#x4F46;&#x73B0;&#x5728;&#x8981;&#x628A;&#x5B83;&#x653E;&#x5728;&#x4E00;&#x4E2A; 325px 325px&#x7684;div&#x4E2D;&#xFF0C;&#x4E14;&#x62D6;&#x52A8;&#x56FE;&#x7247;&#x8981;&#x5C55;&#x793A;&#x76F8;&#x5E94;&#x7684;&#x90E8;&#x5206;&#xFF1A;</p>
+<p><img src="/posts/cbd21fc3/two.png" alt=""></p>
+<p>&#x56FE;&#x7247;&#x62D6;&#x52A8;&#x7684;&#x65B9;&#x6CD5;&#x5982;&#x4E0B;, x&#x8F74;&#x548C;y&#x8F74;&#x5206;&#x5F00;&#x5224;&#x65AD;&#xFF1A;</p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- &#x4E0A;&#x4F20;&#x5934;&#x50CF;&#x63D0;&#x793A;&#x6846; --&gt;</span><br><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;perIconChange-upIconK&quot;</span>&gt;</span><br><span class="line">    &lt;canvas ref=<span class="string">&quot;cutCanvas&quot;</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;perIconChange-upCanvas&quot;</span> :style=<span class="string">&quot;cutIconStyle&quot;</span>&lt;<span class="regexp">/canvas&gt;</span></span><br><span class="line"><span class="regexp">    &lt;img :src=&quot;pointIconSrc&quot; alt=&quot;&quot; :style=&quot;cutIconStyle&quot; @mousedown.stop=&quot;iconDragMouse&quot; draggable=&quot;false&quot; ref=&quot;newCutImgEle&quot;&gt;</span></span><br><span class="line"><span class="regexp">    &lt;span class=&quot;perIconChange-upIconKT&quot;&gt;&#x9009;&#x62E9;&#x4E00;&#x5F20;&#x672C;&#x5730;&#x7684;&#x56FE;&#x7247;&#x8FDB;&#x884C;&#x4E0A;&#x4F20;&lt;/</span>span&gt;</span><br><span class="line">&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/&#x5934;&#x50CF;&#x62D6;&#x52A8;</span></span><br><span class="line"><span class="regexp">iconDragMouse(e) {</span></span><br><span class="line"><span class="regexp">    let translate = parseInt(this.cutIconStyle.transform.slice(11));</span></span><br><span class="line"><span class="regexp">    let minuse = 0;</span></span><br><span class="line"><span class="regexp">    if (this.iconDragBool === &quot;x&quot;) {</span></span><br><span class="line"><span class="regexp">       let originX = e.pageX;</span></span><br><span class="line"><span class="regexp">       this.dragDistance = -Math.floor((325 /</span> <span class="keyword">this</span>.newIconHeight) * <span class="keyword">this</span>.newIconWidth) + <span class="number">325</span>;</span><br><span class="line">       <span class="built_in">document</span>.onmousemove = <span class="function"><span class="params">e</span> =&gt;</span> {</span><br><span class="line">          minuse = e.pageX - originX;</span><br><span class="line">          translate = translate + <span class="built_in">parseInt</span>(minuse);</span><br><span class="line">          <span class="comment">// console.log(translateX, this.dragDistance);</span></span><br><span class="line">          <span class="keyword">if</span> (translate &lt; <span class="number">1</span> &amp;&amp; translate &gt; <span class="keyword">this</span>.dragDistance) {</span><br><span class="line">             <span class="keyword">this</span>.cutIconStyle.transform = <span class="string">&quot;translateX(&quot;</span> + translate + <span class="string">&quot;px)&quot;</span>;</span><br><span class="line">          }</span><br><span class="line">        };</span><br><span class="line">        <span class="built_in">document</span>.onmouseup = <span class="function"><span class="params">e</span> =&gt;</span> {</span><br><span class="line">          <span class="built_in">console</span>.log(<span class="string">&quot;up&quot;</span>);</span><br><span class="line">          <span class="keyword">this</span>.iconCutEvent();</span><br><span class="line">          <span class="built_in">document</span>.onmousemove = <span class="literal">null</span>;</span><br><span class="line">          <span class="built_in">document</span>.onmouseup = <span class="literal">null</span>;</span><br><span class="line">        };</span><br><span class="line">     } <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">this</span>.iconDragBool === <span class="string">&quot;y&quot;</span>) {</span><br><span class="line">        <span class="keyword">let</span> originY = e.pageY;</span><br><span class="line">        <span class="keyword">this</span>.dragDistance = -<span class="built_in">Math</span>.floor((<span class="number">325</span> / <span class="keyword">this</span>.newIconWidth) * <span class="keyword">this</span>.newIconHeight) + <span class="number">325</span>;</span><br><span class="line">        <span class="built_in">document</span>.onmousemove = <span class="function"><span class="params">e</span> =&gt;</span> {</span><br><span class="line">        minuse = e.pageY - originY;</span><br><span class="line">        translate = translate + <span class="built_in">parseInt</span>(minuse);</span><br><span class="line">        <span class="comment">// console.log(translateY, this.dragDistance);</span></span><br><span class="line">        <span class="keyword">if</span> (translate &lt; <span class="number">1</span> &amp;&amp; translate &gt; <span class="keyword">this</span>.dragDistance) {</span><br><span class="line">        	<span class="keyword">this</span>.cutIconStyle.transform = <span class="string">&quot;translateY(&quot;</span> + translate + <span class="string">&quot;px)&quot;</span>;</span><br><span class="line">        }</span><br><span class="line">      };</span><br><span class="line">      <span class="built_in">document</span>.onmouseup = <span class="function"><span class="params">e</span> =&gt;</span> {</span><br><span class="line">         <span class="keyword">this</span>.iconCutEvent();</span><br><span class="line">         <span class="built_in">document</span>.onmousemove = <span class="literal">null</span>;</span><br><span class="line">         <span class="built_in">document</span>.onmouseup = <span class="literal">null</span>;</span><br><span class="line">      };</span><br><span class="line">   }</span><br><span class="line">},</span><br></pre></td></tr></tbody></table></figure>
+<p>&#x200B;            </p>
+<p>&#x56FE;&#x7247;&#x88C1;&#x526A;&#xFF0C;&#x8FD9;&#x4E2A;&#x529F;&#x80FD;&#x8981;&#x548C;h5&#x7684;canvas&#x914D;&#x5408;&#x5B9E;&#x73B0;&#xFF1A;</p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//&#x5934;&#x50CF;&#x88C1;&#x526A;</span></span><br><span class="line">   iconCutEvent() {</span><br><span class="line">     <span class="keyword">if</span> (<span class="keyword">this</span>.iconDragBool === <span class="string">&quot;x&quot;</span>) {</span><br><span class="line">       <span class="keyword">this</span>.canvasStyle = {</span><br><span class="line">         x: <span class="built_in">Math</span>.floor(<span class="keyword">this</span>.newIconHeight / <span class="number">325</span> * <span class="built_in">Math</span>.abs(-<span class="built_in">parseInt</span>(<span class="keyword">this</span>.cutIconStyle.transform.slice(<span class="number">11</span>)))),</span><br><span class="line">         y: <span class="number">0</span>,</span><br><span class="line">         w: <span class="keyword">this</span>.newIconHeight,</span><br><span class="line">         h: <span class="keyword">this</span>.newIconHeight</span><br><span class="line">       };</span><br><span class="line">     } <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">this</span>.iconDragBool === <span class="string">&quot;y&quot;</span>) {</span><br><span class="line">       <span class="keyword">this</span>.canvasStyle = {</span><br><span class="line">         x: <span class="number">0</span>,</span><br><span class="line">         y: <span class="built_in">Math</span>.floor(<span class="keyword">this</span>.newIconWidth / <span class="number">325</span> * <span class="built_in">Math</span>.abs(-<span class="built_in">parseInt</span>(<span class="keyword">this</span>.cutIconStyle.transform.slice(<span class="number">11</span>)))),</span><br><span class="line">         w: <span class="keyword">this</span>.newIconWidth,</span><br><span class="line">         h: <span class="keyword">this</span>.newIconWidth</span><br><span class="line">       };</span><br><span class="line">     } <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">this</span>.iconDragBool === <span class="string">&apos;&apos;</span>) {</span><br><span class="line">       <span class="keyword">this</span>.canvasStyle = {</span><br><span class="line">         x: <span class="number">0</span>,</span><br><span class="line">         y: <span class="number">0</span>,</span><br><span class="line">         w: <span class="keyword">this</span>.newIconWidth,</span><br><span class="line">         h: <span class="keyword">this</span>.newIconWidth</span><br><span class="line">       };</span><br><span class="line">     }</span><br><span class="line">     <span class="keyword">let</span> canvas = <span class="built_in">document</span>.createElement(<span class="string">&quot;canvas&quot;</span>);</span><br><span class="line">     <span class="keyword">let</span> ctx = canvas.getContext(<span class="string">&quot;2d&quot;</span>);</span><br><span class="line">     <span class="keyword">this</span>.$nextTick(<span class="function"><span class="params">()</span> =&gt;</span> {</span><br><span class="line">       <span class="comment">//&#x5C06;img&#x88AB;&#x88C1;&#x526A;&#x7684;x,y,w,h&#x6240;&#x5BF9;&#x5E94;&#x7684;canvas&#x533A;&#x57DF;&#x62FF;&#x51FA;&#x6765;</span></span><br><span class="line">       <span class="keyword">let</span> imgData = <span class="keyword">this</span>.$refs.cutCanvas</span><br><span class="line">         .getContext(<span class="string">&quot;2d&quot;</span>)</span><br><span class="line">         .getImageData(</span><br><span class="line">           <span class="keyword">this</span>.canvasStyle.x * <span class="number">2</span>,</span><br><span class="line">           <span class="keyword">this</span>.canvasStyle.y * <span class="number">2</span>,</span><br><span class="line">           <span class="keyword">this</span>.canvasStyle.w * <span class="number">2</span>,</span><br><span class="line">           <span class="keyword">this</span>.canvasStyle.h * <span class="number">2</span></span><br><span class="line">         );</span><br><span class="line">       canvas.width = <span class="keyword">this</span>.canvasStyle.w * <span class="number">2</span>;</span><br><span class="line">       canvas.height = <span class="keyword">this</span>.canvasStyle.h * <span class="number">2</span>;</span><br><span class="line">       <span class="comment">//&#x5C06;&#x88C1;&#x526A;&#x7684;&#x533A;&#x57DF;&#x7ED9;&#x65B0;&#x521B;&#x5EFA;&#x7684;canvas</span></span><br><span class="line">       ctx.putImageData(</span><br><span class="line">         imgData,</span><br><span class="line">         <span class="number">0</span>,</span><br><span class="line">         <span class="number">0</span>,</span><br><span class="line">         <span class="number">0</span>,</span><br><span class="line">         <span class="number">0</span>,</span><br><span class="line">         <span class="keyword">this</span>.canvasStyle.w * <span class="number">2</span>,</span><br><span class="line">         <span class="keyword">this</span>.canvasStyle.h * <span class="number">2</span></span><br><span class="line">       );</span><br><span class="line">       <span class="comment">//&#x8F93;&#x51FA;base64, &#x5934;&#x50CF;&#x9884;&#x89C8;</span></span><br><span class="line">       <span class="keyword">this</span>.perHeadIconSrc = canvas.toDataURL(<span class="string">&quot;image/png&quot;</span>);</span><br><span class="line">     });</span><br><span class="line">   },</span><br></pre></td></tr></tbody></table></figure>
+<p>&#x56FE;&#x7247;&#x7684;&#x5904;&#x7406;&#x6682;&#x65F6;&#x5230;&#x8FD9;&#x91CC;&#xFF0C;&#x4EE5;&#x540E;&#x78B0;&#x5230;&#x5176;&#x4ED6;&#x7684;&#x518D;&#x7EE7;&#x7EED;&#x603B;&#x7ED3;</p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+    
+  </div>
+</article>
+
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#图片加载失败"><span class="post-toc-number">1.</span> <span class="post-toc-text">图片加载失败</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#图片拖动及裁剪"><span class="post-toc-number">2.</span> <span class="post-toc-text">图片拖动及裁剪</span></a></li></ol>
+        </nav>
+    </aside>
+   
+    </div>
+    <footer class="footer-nav">
+      
+  <span class="footer-msg">
+    2018
+    
+    
+    <span class="timeDivide">-</span>
+    
+    Orange~.&nbsp;
+    Power by
+    <a href="https://hexo.io/" target="_blank" rel="external nofollow">Hexo</a>
+    and
+    <a class="orangelink" href="https://github.com/" target="_blank" rel="">
+      orange</a>
+  </span>
+
+    </footer>
+    <div class="back-top" id="back-top">
+      <i class="back-top-icon"></i>
+    </div>
+    
+  
+  <script src="/js/jquery/jquery-3.1.1.min.js"></script>
+
+    <script src="/js/theme.js"></script>
+    <script src="/js/index.js"></script>
+  
+  </div>
+</body>

@@ -405,6 +405,10 @@ code {
   display: inline-block;
   margin-left: 20px;
 }
+.post .post-datetag .post-tag .article-tag-list-item {
+  display: inline-block;
+  margin-right: 10px;
+}
 .post .post-datetag .post-tag a {
   color: #aaa;
   text-decoration: none;
