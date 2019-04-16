@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="喜欢晴天，喜欢雨天">
+    
+      <link rel="icon" href="/img/favicon.ico">
+    
+    <meta name="keyword"  content="">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+  <div class="page">
+    <div class="head">
+      <header class="head-header">
+  <h1 class="head-authorH">
+    <a href="/" class="head-authorLink">
+      橙子</a>
+  </h1>
+  <div class="head-right">
+    <!-- <div class="head-search">
+      <input class="head-searchK"></input>
+      <span class="head-searchT">
+        </span>
+    </div> -->
+    <button class="barWrap" id="barWrap-toggle">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <div class="head-about" id="head-about">
+      
+      <a class="head-aboutLink" href="/about">
+        About</a>
+      
+    </div>
+  </div>
+</header>
+    </div>
+    <div class="main">
+        <div class="barShow-head" id="barShow">
+  <ul class="barShow-ul">
+    
+      <li class="barShow-item">
+        <a href="/archives"><span>
+            Archives</span></a>
+      </li>
+    
+      <li class="barShow-item">
+        <a href="/categories/life"><span>
+            Lifes</span></a>
+      </li>
+    
+      <li class="barShow-item">
+        <a href="/tags"><span>
+            Tags</span></a>
+      </li>
+    
+    
+      <li class="barShow-item">
+        <a class="head-aboutLink" href="/about">
+          About
+        </a>
+      </li>
+    
+  </ul>
+</div>
+      <article class="post" id="post">
+  <header class="post-head">
+    <h1 class="post-title">
+      <a class="title" href="/posts/717e9804/">
+        html, css, js 加载顺序
+      </a>
+    </h1>
+  </header>
+  <div class="post-datetag">
+    <div class="post-date">
+      <time class="post-time" title="2018-12-29 10:32:28" datetime="2018-12-29T02:32:28.000Z" itemprop="datePublished">
+  2018-12-29</time>
+    </div>
+    <div class="post-tag">
+      
+    </div>
+  </div>
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>&#x6211;&#x4EEC;&#x770B;&#x5230;&#x7684;&#x9875;&#x9762;&#x662F;&#x5DF2;&#x7ECF;&#x7ED8;&#x5236;&#x5B8C;&#x6210;&#x7684;&#xFF0C;html&#xFF0C;css&#xFF0C; js &#x8FD9;&#x4E9B;&#x6587;&#x4EF6;&#x5F53;&#x7136;&#x662F;&#x5DF2;&#x7ECF;&#x52A0;&#x8F7D;&#x5B8C;&#x6210;&#x4E86;&#x7684;&#xFF0C;&#x4F46;&#x8FD9;&#x4E2A;&#x52A0;&#x8F7D;&#x8FC7;&#x7A0B;&#x4E2D;&#x603B;&#x6709;&#x4E2A;&#x52A0;&#x8F7D;&#x7684;&#x5148;&#x540E;&#x987A;&#x5E8F;&#x7684;&#xFF0C;&#x55EF;&#xFF0C;&#x8FD8;&#x662F;&#x5F88;&#x91CD;&#x8981;&#x7684;&#xFF0C;&#x8FD9;&#x91CC;&#x5C31;&#x662F;&#x603B;&#x7ED3;&#x8FD9;&#x4E2A;&#x52A0;&#x8F7D;&#x8FC7;&#x7A0B;&#x53CA;&#x987A;&#x5E8F;<a id="more"></a></p>
+<p>&#x200B;                    </p>
+<h4 id="html-css-&#x52A0;&#x8F7D;"><a href="#html-css-&#x52A0;&#x8F7D;" class="headerlink" title="html css &#x52A0;&#x8F7D;"></a>html css &#x52A0;&#x8F7D;</h4><p>&#x5047;&#x8BBE;&#x73B0;&#x5728;&#x6709;&#x4E2A;&#x9875;&#x9762; timeLine.html &#xFF1A;</p>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>&#x65F6;&#x95F4;&#x7EBF;<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">    div {</span></span><br><span class="line"><span class="undefined">      width: 100px;</span></span><br><span class="line"><span class="undefined">      height: 100px;</span></span><br><span class="line"><span class="undefined">      background: blue;</span></span><br><span class="line"><span class="undefined">    }</span></span><br><span class="line"><span class="undefined">  </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">strong</span>&gt;</span><span class="tag">&lt;/<span class="name">strong</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+<p>&#x8FD9;&#x4E2A;&#x9875;&#x9762;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x5B83;&#x7ED8;&#x5236;&#x7684;&#x8FC7;&#x7A0B;&#x662F;&#x8FD9;&#x6837;&#x7684;&#xFF1A;</p>
+<p>&#x200B;            </p>
+<p><img src="/posts/717e9804/one.png" alt=""></p>
+<p>&#x200B;                    </p>
+<p>&#x200B;    &#x5728;&#x9875;&#x9762;&#x7ED8;&#x5236;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x9075;&#x5B88;&#x7684;&#x662F; &#x6DF1;&#x5EA6;&#x4F18;&#x5148;&#x539F;&#x5219;&#xFF0C;&#x5373;&#x4E00;&#x6761;&#x9053;&#x8D70;&#x5230;&#x9ED1;&#x3002;&#x9996;&#x5148;&#xFF0C;&#x4F1A;&#x5F62;&#x6210;&#x4E00;&#x4E2A; domTree &#xFF0C;&#x5B83;&#x4F1A;&#x628A;&#x9047;&#x5230;&#x7684;&#x6240;&#x6709; dom &#x8282;&#x70B9;&#x90FD;&#x6302;&#x5230;&#x8FD9;&#x4E2A;&#x6811;&#x4E0A;&#xFF0C;&#x8FD9;&#x53EB; dom &#x8282;&#x70B9;&#x7684;&#x89E3;&#x6790;&#x3002;&#x5728;&#x8FD9;&#x4E2A; timeLine.html &#x4E2D;&#xFF0C;&#x5B83;&#x4F1A;&#x89E3;&#x6790;&#x5230; head &#x6807;&#x7B7E;&#xFF0C;&#x6302;&#x5230; domTree &#xFF0C;&#x7136;&#x540E;&#x518D;&#x5C06;&#x5B83;&#x4E0B;&#x9762;&#x7684; meta title &#x6807;&#x7B7E;&#x6302;&#x5230;&#x6811;&#x4E0A;&#xFF0C;&#x5F53;&#x628A;head&#x91CC;&#x7684;&#x6807;&#x7B7E;&#x90FD;&#x89E3;&#x6790;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x518D;&#x53BB;&#x89E3;&#x6790;body &#x6807;&#x7B7E;&#xFF0C;&#x8FD9;&#x4E2A;&#x89E3;&#x6790;&#x8FC7;&#x7A0B;&#x5C31;&#x662F;&#x7B26;&#x5408; &#x6DF1;&#x5EA6;&#x4F18;&#x5148; &#x7684;&#x539F;&#x5219;&#x3002;cssTree &#x540C;&#x6837;&#x662F;&#x8FD9;&#x6837;&#x89E3;&#x6790;&#x7684;&#x3002;&#x5F53; domTree &#x89E3;&#x6790;&#x5B8C;&#x6BD5;&#x540E; &#x7B49;&#x5F85; cssTree &#x7684;&#x89E3;&#x6790;&#xFF0C;&#x5F53; cssTree &#x4E5F;&#x89E3;&#x6790;&#x5B8C;&#x6BD5;&#x540E;&#xFF0C;&#x8FD9;&#x4E24;&#x4E2A;&#x5408;&#x5728;&#x4E00;&#x8D77;&#x5C31;&#x5F62;&#x6210;&#x4E86; renderTree&#xFF0C;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x624D;&#x5F00;&#x59CB;&#x6309;&#x7167; renderTree &#x7684;&#x89C4;&#x5219;&#x6765;&#x7ED8;&#x5236;&#x9875;&#x9762;</p>
+<p>&#x200B;                    </p>
+<p>&#x200B;    &#x6CE8;&#x610F;&#xFF1A;domTree &#x89E3;&#x6790;&#x5B8C;&#x6BD5;&#x7684;&#x8FC7;&#x7A0B;&#x53EA;&#x662F;&#x8BF4;&#x628A; dom &#x8282;&#x70B9;&#x90FD;&#x6302;&#x5230;&#x6811;&#x4E0A;&#x4E86;&#xFF0C;&#x4F46;&#x4E0D;&#x4EE3;&#x8868;&#x5B83;&#x52A0;&#x8F7D;&#x5B8C;&#x6210;&#xFF0C;&#x5047;&#x8BBE;&#x73B0;&#x5728;&#x6709;&#x4E2A; <code>img</code> &#x6807;&#x7B7E;&#xFF0C;&#x53EA;&#x4F1A;&#x6302;&#x4E0A;&#x8FD9;&#x4E2A; img &#x8282;&#x70B9;&#xFF0C;&#x81F3;&#x4E8E;&#x5B83;&#x662F;&#x4EC0;&#x4E48;&#xFF0C;&#x5E76;&#x4E0D;&#x5F71;&#x54CD; domTree &#x7684;&#x5F62;&#x6210;&#xFF0C;&#x8FD9;&#x4E2A;&#x662F;&#x5F02;&#x6B65;&#x7684;&#x8FC7;&#x7A0B;</p>
+<p>&#x200B;                            </p>
+<h4 id="&#x5F02;&#x6B65;&#x52A0;&#x8F7D;js"><a href="#&#x5F02;&#x6B65;&#x52A0;&#x8F7D;js" class="headerlink" title="&#x5F02;&#x6B65;&#x52A0;&#x8F7D;js"></a>&#x5F02;&#x6B65;&#x52A0;&#x8F7D;js</h4><p>&#x4E0A;&#x9762;&#x7684;&#x8FD9;&#x4E2A;&#x9875;&#x9762;&#x662F;&#x6CA1;&#x6709; js &#x7684;&#xFF0C;js &#x7684;&#x52A0;&#x8F7D;&#x548C;html css &#x4E0D;&#x4E00;&#x6837;&#xFF0C;&#x5B83;&#x4F1A;&#x963B;&#x65AD; &#x5F53;&#x524D;&#x7684;&#x52A0;&#x8F7D;&#x8FC7;&#x7A0B;&#xFF0C;&#x7B49;&#x5B83;js&#x52A0;&#x8F7D;&#x5B8C;&#x540E;&#xFF0C;&#x624D;&#x53EF;&#x4EE5;&#x7EE7;&#x7EED;&#x4E0B;&#x9762;&#x7684;&#x8FC7;&#x7A0B;&#xFF0C;&#x5E76;&#x4E0D;&#x80FD;&#x548C;html css &#x5E76;&#x884C;&#x52A0;&#x8F7D;&#xFF0C;&#x56E0;&#x4E3A; js &#x80FD;&#x4FEE;&#x6539;html css&#x3002;</p>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+<p>&#x200B;        </p>
+<p>&#x200B;                </p>
+<p>&#x4F46;&#x6709;&#x4E9B; js &#x662F;&#x7528;&#x6765;&#x521D;&#x59CB;&#x5316;&#x6570;&#x636E;&#x6216;&#x662F;&#x5DE5;&#x5177;&#xFF0C;&#x8FD9;&#x4E9B;js&#x4E0D;&#x4F1A;&#x4FEE;&#x6539; html css &#xFF0C;&#x800C;&#x8FD9;&#x4E9B;js &#x5C31;&#x53EF;&#x4EE5;&#x5F02;&#x6B65;&#x52A0;&#x8F7D;&#xFF0C;&#x751A;&#x81F3;&#x662F;&#x6309;&#x9700;&#x52A0;&#x8F7D;&#xFF0C;&#x90A3;&#x65B9;&#x6CD5;&#x6709;&#x4E09;&#x79CD;&#xFF1A;</p>
+<p>1 &#x6DFB;&#x52A0; defer&#xFF0C;&#x52A0;&#x4E0A;&#x540E;&#x5C31;&#x53D8;&#x6210;&#x5F02;&#x6B65;&#x52A0;&#x8F7D;&#x4E86;&#xFF0C;&#x4F46;&#x662F;&#xFF1A;&#x53EA;&#x6709; ie &#x80FD;&#x7528;&#xFF08;ie9&#x53CA;&#x4EE5;&#x4E0B;&#xFF09;&#xFF0C;&#x4E14;&#x4EE3;&#x7801;&#x8FD8;&#x53EF;&#x4EE5;&#x5199;&#x5230;&#x5185;&#x90E8;&#xFF0C;&#x54EA;&#x6015;&#x5DF2;&#x7ECF;&#x4E0B;&#x8F7D;&#x5B8C;&#x6210;&#x4E86;&#x4E5F;&#x8981;&#x7B49;&#x9875;&#x9762;&#x89E3;&#x6790;&#x5B8C;&#x6BD5;&#xFF08;&#x5F62;&#x6210;renderTree&#x540E;&#xFF09;&#x624D;&#x6267;&#x884C;&#xFF0C;&#x5F02;&#x6B65;&#x52A0;&#x8F7D;</p>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;tool.js&quot;</span> <span class="attr">defer</span>=<span class="string">&quot;defer&quot;</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+<p>2 async W3C&#x6807;&#x51C6;&#xFF0C;ie9&#x4EE5;&#x4E0A;&#xFF0C;&#x8FD9;&#x4E2A;&#x662F;&#x52A0;&#x8F7D;&#x5B8C;&#x5C31;&#x4F7F;&#x7528;&#xFF0C;&#x4E0D;&#x80FD;&#x5728;&#x6807;&#x7B7E;&#x91CC;&#x5199;&#x4EE3;&#x7801;&#xFF0C;&#x5F02;&#x6B65;&#x52A0;&#x8F7D;</p>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;tool.js&quot;</span> <span class="attr">async</span>=<span class="string">&quot;async&quot;</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+<p>3 &#x521B;&#x5EFA;script&#x6807;&#x7B7E;&#xFF0C;&#x63D2;&#x5165;&#x5230;DOM&#x4E2D;&#xFF0C;&#x52A0;&#x8F7D;&#x5B8C;&#x6BD5;&#x540E; callback</p>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">strong</span>&gt;</span><span class="tag">&lt;/<span class="name">strong</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">    var script = document.createElement(&apos;script&apos;)</span></span><br><span class="line"><span class="undefined">    script.type = &apos;text/javascript&apos;</span></span><br><span class="line"><span class="undefined">    script.src = &apos;./src/index.js&apos;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">    document.head.appendChild(script)</span></span><br><span class="line"><span class="undefined">  </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line">// ./src/index.js</span><br><span class="line"></span><br><span class="line">function test () {</span><br><span class="line">  console.log(&apos;&#x65F6;&#x95F4;&#x7EBF;&apos;)</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>&#x200B;            </p>
+<p>&#x5982;&#x4E0A;&#xFF1A;&#x521B;&#x5EFA; script &#x6807;&#x7B7E;&#xFF0C;&#x7ED9;&#x5B83;&#x8BBE;&#x7F6E; src &#x5C5E;&#x6027;&#xFF0C;&#x5F53;&#x8FD9;&#x53E5;&#x6267;&#x884C;&#x5B8C;&#x6BD5;&#x540E;&#x5C31;&#x5F00;&#x59CB;&#x5F02;&#x6B65;&#x4E0B;&#x8F7D;&#x8FD9;&#x4E2A;js&#x6587;&#x4EF6;&#x4E86;&#xFF0C;&#x4F46;&#x662F;&#x5B83;&#x53EA;&#x662F;&#x4E0B;&#x8F7D;&#x4E86;&#x5E76;&#x6CA1;&#x6709;&#x4EC0;&#x4E48;&#x7528;&#xFF0C;&#x53EA;&#x6709;&#x6267;&#x884C; <code>document.head.appendChild(script)</code> &#x540E;&#x624D;&#x53EF;&#x4EE5;&#x7528;&#x8FD9;&#x91CC;&#x9762;&#x7684;&#x65B9;&#x6CD5;</p>
+<p>&#x200B;                        </p>
+<p>&#x4F46;&#x6B64;&#x65F6;&#x82E5;&#x662F;&#x76F4;&#x63A5;&#x5728;&#x63D2;&#x5165;&#x8BED;&#x53E5;&#x4E4B;&#x540E;&#x6267;&#x884C; test &#x65B9;&#x6CD5;&#x7684;&#x8BDD;&#xFF0C;&#x662F;&#x62A5;&#x9519;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;src&#x8FD9;&#x53E5;&#x662F;&#x5728;&#x5F02;&#x6B65;&#x52A0;&#x8F7D;&#x6587;&#x4EF6;&#xFF0C;&#x6240;&#x4EE5;&#x8981;&#x6267;&#x884C;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x9700;&#x8981;js&#x6587;&#x4EF6;&#x52A0;&#x8F7D;&#x5B8C;&#x6210;&#x540E;&#xFF1A;</p>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">  var script = document.createElement(&apos;script&apos;)</span></span><br><span class="line"><span class="undefined">  script.type = &apos;text/javascript&apos;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">  document.head.appendChild(script)</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">  if (script.readyState) {</span></span><br><span class="line"><span class="undefined">    script.onreadystatechange = function () {</span></span><br><span class="line"><span class="undefined">      if (script.readyState === &apos;complete&apos; || script.readyState === &apos;loaded&apos;) {</span></span><br><span class="line"><span class="undefined">        test()</span></span><br><span class="line"><span class="undefined">      }</span></span><br><span class="line"><span class="undefined">    }</span></span><br><span class="line"><span class="undefined">  } else {</span></span><br><span class="line"><span class="undefined">    script.onload = function () {</span></span><br><span class="line"><span class="undefined">      test()</span></span><br><span class="line"><span class="undefined">    }</span></span><br><span class="line"><span class="undefined">  }</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">  script.src = &apos;./src/index.js&apos;</span></span><br><span class="line"><span class="undefined">  </span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+<p>&#x200B;                </p>
+<p>&#x6CE8;&#x610F;&#xFF1A;</p>
+<p>1 &#x7531;&#x4E8E; ie10&#x53CA;&#x4EE5;&#x4E0B; &#x7684; script &#x6807;&#x7B7E;&#x6CA1;&#x6709; onload &#xFF0C;&#x4F46;&#x5B83;&#x6709;&#x81EA;&#x5DF1;&#x7684; <code>readyState</code>  &#xFF0C;&#x6240;&#x4EE5;&#x4E24;&#x8005;&#x8FD9;&#x6837;&#x517C;&#x5BB9;&#x4E00;&#x4E0B;</p>
+<p>2 <strong>&#x628A;src&#x8FD9;&#x53E5;&#x79FB;&#x5230;&#x7ED1;&#x5B9A;&#x4E8B;&#x4EF6;&#x4E4B;&#x540E;</strong> &#xFF0C;&#x76EE;&#x7684;&#x662F;&#x4EE5;&#x9632;&#x6587;&#x4EF6;&#x4EE5;&#x52A0;&#x8F7D;&#x5B8C;&#x6BD5;&#x4E86;&#xFF0C;&#x4F46;&#x662F;&#x8FD8;&#x6CA1;&#x6267;&#x884C;&#x5230; script.readyState&#x8FD9;&#x53E5;</p>
+<p>&#x200B;                </p>
+<p>&#x628A;&#x4E0A;&#x9762;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x5C01;&#x88C5;&#x4E00;&#x4E0B;&#xFF1A;</p>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><br><span class="line"></span><br><span class="line">   <span class="function"><span class="keyword">function</span> <span class="title">loadScript</span>(<span class="params">url, callback</span>) </span>{</span><br><span class="line">     <span class="keyword">var</span> script = <span class="built_in">document</span>.createElement(<span class="string">&apos;script&apos;</span>)</span><br><span class="line">     script.type = url</span><br><span class="line">     <span class="built_in">document</span>.head.appendChild(script)</span><br><span class="line">     <span class="keyword">if</span> (script.readyState) {</span><br><span class="line">       script.onreadystatechange = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>{</span><br><span class="line">         <span class="keyword">if</span> (script.readyState === <span class="string">&apos;complete&apos;</span> || script.readyState === <span class="string">&apos;loaded&apos;</span>) {</span><br><span class="line">           callback()</span><br><span class="line">         }</span><br><span class="line">       }</span><br><span class="line">     } <span class="keyword">else</span> {</span><br><span class="line">       script.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>{</span><br><span class="line">         callback()</span><br><span class="line">       }</span><br><span class="line">     }</span><br><span class="line">     script.src = <span class="string">&apos;./src/index.js&apos;</span></span><br><span class="line">   }</span><br><span class="line">   loadScript(<span class="string">&apos;text/javascript&apos;</span>, test)</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+<p>&#x4F46;&#x662F;&#xFF1A;&#x62A5;&#x9519;&#x4E86;&#xFF0C;&#x62A5;&#x9519;&#x539F;&#x56E0;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x6267;&#x884C; loadScript&#xFF08;&#xFF09; &#x8FD9;&#x53E5;&#x65F6;&#x538B;&#x6839;&#x4E0D;&#x77E5;&#x9053;test&#x662F;&#x8C01;&#x554A;&#xFF0C;&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#x6709;&#x5F88;&#x591A;&#xFF0C;&#x8FD9;&#x91CC;&#x5199;&#x4E09;&#x4E2A;&#xFF08;&#x76EE;&#x524D;&#x80FD;&#x60F3;&#x5230;&#x8FD9;&#x4E09;&#x4E2A;&#x54C8;&#x54C8;&#x54C8;&#xFF09;</p>
+<p>1 &#x4F20;&#x5B57;&#x7B26;&#x4E32;&#x8FDB;&#x53BB;&#xFF1A;</p>
+<p><code>loadScript(&apos;text/javascript&apos;, &apos;test()&apos;)</code></p>
+<p>&#x8C03;&#x7528;&#xFF1A;<code>eval(callback)</code> </p>
+<p>&#x5C3D;&#x91CF;&#x4E0D;&#x8981;&#x4F7F;&#x7528;&#xFF01;</p>
+<p>2 &#x4F20;&#x533F;&#x540D;&#x51FD;&#x6570;&#x8FDB;&#x53BB;&#xFF1A;</p>
+<p><code>loadScript(&apos;text/javascript&apos;, function () {test()})</code></p>
+<p>&#x8C03;&#x7528;&#xFF1A;<code>callback()</code></p>
+<p>3 &#x76F4;&#x63A5;&#x4F20;&#x5B57;&#x7B26;&#x4E32;&#x8FDB;&#x53BB;&#xFF0C;&#x5E76;&#x4FEE;&#x6539; js &#x6587;&#x4EF6;:</p>
+<p><code>loadScript(&apos;text/javascript&apos;, &apos;test&apos;)</code></p>
+<p>src/index.js: </p>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = {</span><br><span class="line">  test: <span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>{</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&apos;&#x65F6;&#x95F4;&#x7EBF;&apos;</span>)</span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>&#x8C03;&#x7528;&#xFF1A;<code>obj[callback]()</code></p>
+<p>&#x200B;                </p>
+<p>&#x5F53;&#x7136;&#xFF0C;&#x82E5;&#x4E0D;&#x9700;&#x8981;&#x56DE;&#x8C03;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x5F02;&#x6B65;&#x52A0;&#x8F7D;js&#x6587;&#x4EF6;&#xFF0C;&#x90A3;&#x5C31;&#x7075;&#x6D3B;&#x4F7F;&#x7528;</p>
+<p>&#x200B;                </p>
+<h4 id="js&#x52A0;&#x8F7D;&#x65F6;&#x95F4;&#x7EBF;"><a href="#js&#x52A0;&#x8F7D;&#x65F6;&#x95F4;&#x7EBF;" class="headerlink" title="js&#x52A0;&#x8F7D;&#x65F6;&#x95F4;&#x7EBF;"></a>js&#x52A0;&#x8F7D;&#x65F6;&#x95F4;&#x7EBF;</h4><p>&#x200B;                    </p>
+<p>1&#x3001;&#x521B;&#x5EFA;Document&#x5BF9;&#x8C61;&#xFF0C;&#x5F00;&#x59CB;&#x89E3;&#x6790;web&#x9875;&#x9762;&#x3002;&#x89E3;&#x6790;HTML&#x5143;&#x7D20;&#x548C;&#x4ED6;&#x4EEC;&#x7684;&#x6587;&#x672C;&#x5185;&#x5BB9;&#x540E;&#x6DFB;&#x52A0;Element&#x5BF9;&#x8C61;&#x548C;Text&#x8282;&#x70B9;&#x5230;&#x6587;&#x6863;&#x4E2D;&#x3002;&#x8FD9;&#x4E2A;&#x9636;&#x6BB5;document.readyState = &#x2018;loading&#x2019;&#x3002;</p>
+<p>&#x200B;                    </p>
+<p>2&#x3001;&#x9047;&#x5230;link&#x5916;&#x90E8;css&#xFF0C;&#x521B;&#x5EFA;&#x7EBF;&#x7A0B;&#x52A0;&#x8F7D;&#xFF0C;&#x5E76;&#x7EE7;&#x7EED;&#x89E3;&#x6790;&#x6587;&#x6863;&#x3002;</p>
+<p>&#x200B;                        </p>
+<p>3&#x3001;&#x9047;&#x5230;script&#x5916;&#x90E8;js&#xFF0C;&#x5E76;&#x4E14;&#x6CA1;&#x6709;&#x8BBE;&#x7F6E;async&#x3001;defer&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x52A0;&#x8F7D;&#xFF0C;&#x5E76;&#x963B;&#x585E;&#xFF0C;&#x7B49;&#x5F85;js&#x52A0;&#x8F7D;&#x5B8C;&#x6210;&#x5E76;&#x6267;&#x884C;&#x8BE5;&#x811A;&#x672C;&#xFF0C;&#x7136;&#x540E;&#x7EE7;&#x7EED;&#x89E3;&#x6790;&#x6587;&#x6863;&#x3002;</p>
+<p>&#x200B;                        </p>
+<p>4&#x3001;&#x9047;&#x5230;script&#x5916;&#x90E8;js&#xFF0C;&#x5E76;&#x4E14;&#x8BBE;&#x7F6E;&#x6709;async&#x3001;defer&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x521B;&#x5EFA;&#x7EBF;&#x7A0B;&#x52A0;&#x8F7D;&#xFF0C;&#x5E76;&#x7EE7;&#x7EED;&#x89E3;&#x6790;&#x6587;&#x6863;&#x3002;<br>&#x5BF9;&#x4E8E;async&#x5C5E;&#x6027;&#x7684;&#x811A;&#x672C;&#xFF0C;&#x811A;&#x672C;&#x52A0;&#x8F7D;&#x5B8C;&#x6210;&#x540E;&#x7ACB;&#x5373;&#x6267;&#x884C;&#x3002;&#xFF08;&#x5F02;&#x6B65;&#x7981;&#x6B62;&#x4F7F;&#x7528;document.write()&#xFF09;</p>
+<p>&#x200B;                        </p>
+<p>5&#x3001;&#x9047;&#x5230;img&#x7B49;&#xFF0C;&#x5148;&#x6B63;&#x5E38;&#x89E3;&#x6790;dom&#x7ED3;&#x6784;&#xFF0C;&#x7136;&#x540E;&#x6D4F;&#x89C8;&#x5668;&#x5F02;&#x6B65;&#x52A0;&#x8F7D;src&#xFF0C;&#x5E76;&#x7EE7;&#x7EED;&#x89E3;&#x6790;&#x6587;&#x6863;&#x3002;</p>
+<p>&#x200B;                    </p>
+<p>6&#x3001;&#x5F53;&#x6587;&#x6863;&#x89E3;&#x6790;&#x5B8C;&#x6210;&#xFF0C;document.readyState = &#x2018;interactive&#x2019;&#x3002;</p>
+<p>&#x200B;                    </p>
+<p>7&#x3001;&#x6587;&#x6863;&#x89E3;&#x6790;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x6240;&#x6709;&#x8BBE;&#x7F6E;&#x6709;defer&#x7684;&#x811A;&#x672C;&#x4F1A;&#x6309;&#x7167;&#x987A;&#x5E8F;&#x6267;&#x884C;&#x3002;&#xFF08;&#x6CE8;&#x610F;&#x4E0E;async&#x7684;&#x4E0D;&#x540C;,&#x4F46;&#x540C;&#x6837;&#x7981;&#x6B62;&#x4F7F;&#x7528;<br>document.write()&#xFF09;;</p>
+<p>&#x200B;                    </p>
+<p>8&#x3001;document&#x5BF9;&#x8C61;&#x89E6;&#x53D1;DOMContentLoaded&#x4E8B;&#x4EF6;&#xFF0C;&#x8FD9;&#x4E5F;&#x6807;&#x5FD7;&#x7740;&#x7A0B;&#x5E8F;&#x6267;&#x884C;&#x4ECE;&#x540C;&#x6B65;&#x811A;&#x672C;&#x6267;&#x884C;&#x9636;&#x6BB5;&#xFF0C;&#x8F6C;&#x5316;&#x4E3A;&#x4E8B;&#x4EF6;&#x9A71;&#x52A8;&#x9636;&#x6BB5;&#xFF0C;&#x5373;&#x5F00;&#x59CB;&#x8BC6;&#x522B;&#x4E8B;&#x4EF6;&#x4E86;&#x3002;DOMContentLoaded&#x8FD9;&#x4E2A;&#x4E8B;&#x4EF6;&#x5728;dom&#x89E3;&#x6790;&#x5B8C;&#x5C31;&#x53EF;&#x4EE5;&#x89E6;&#x53D1;&#xFF0C;&#x4E0D;&#x7528;&#x7B49;&#x5230;&#x52A0;&#x8F7D;&#x5B8C;&#x518D;&#x53BB;&#x6267;&#x884C;</p>
+<p>&#x200B;                    </p>
+<p>9&#x3001;&#x5F53;&#x6240;&#x6709;async&#x7684;&#x811A;&#x672C;&#x52A0;&#x8F7D;&#x5B8C;&#x6210;&#x5E76;&#x6267;&#x884C;&#x540E;&#x3001;img&#x7B49;&#x52A0;&#x8F7D;&#x5B8C;&#x6210;&#x540E;&#xFF0C;document.readyState = &#x2018;complete&#x2019;&#xFF0C;window&#x5BF9;&#x8C61;&#x89E6;&#x53D1;load&#x4E8B;&#x4EF6;&#x3002;            </p>
+<p>&#x200B;            </p>
+<p>10&#x3001;&#x4ECE;&#x6B64;&#xFF0C;&#x4EE5;&#x5F02;&#x6B65;&#x54CD;&#x5E94;&#x65B9;&#x5F0F;&#x5904;&#x7406;&#x7528;&#x6237;&#x8F93;&#x5165;&#x3001;&#x7F51;&#x7EDC;&#x4E8B;&#x4EF6;&#x7B49;&#x3002;</p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+    
+  </div>
+</article>
+
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#html-css-加载"><span class="post-toc-number">1.</span> <span class="post-toc-text">html css 加载</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#异步加载js"><span class="post-toc-number">2.</span> <span class="post-toc-text">异步加载js</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#js加载时间线"><span class="post-toc-number">3.</span> <span class="post-toc-text">js加载时间线</span></a></li></ol>
+        </nav>
+    </aside>
+   
+    </div>
+    <footer class="footer-nav">
+      
+  <span class="footer-msg">
+    2018
+    
+    
+    <span class="timeDivide">-</span>
+    
+    Orange~.&nbsp;
+    Power by
+    <a href="https://hexo.io/" target="_blank" rel="external nofollow">Hexo</a>
+    and
+    <a class="orangelink" href="https://github.com/" target="_blank" rel="">
+      orange</a>
+  </span>
+
+    </footer>
+    <div class="back-top" id="back-top">
+      <i class="back-top-icon"></i>
+    </div>
+    
+  
+  <script src="/js/jquery/jquery-3.1.1.min.js"></script>
+
+    <script src="/js/theme.js"></script>
+    <script src="/js/index.js"></script>
+  
+  </div>
+</body>
